@@ -1,0 +1,47 @@
+.animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #fdfaf4;
+  position: relative;
+  overflow: hidden;
+
+  .svg_container {
+    width: 100%;
+    height: 100%;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+
+    .intro-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      span.left-text,
+      span.right-text {
+        position: absolute;
+        opacity: 0;
+        font-size: 2rem;
+        font-weight: bold;
+        pointer-events: none;
+      }
+
+      span.left-text {
+        color: #7a6b5c;
+      }
+
+      span.right-text {
+        color: #4c4333;
+      }
+    }
+  }
+}
