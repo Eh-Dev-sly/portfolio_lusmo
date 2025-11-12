@@ -13,46 +13,63 @@ interface IntroAnimationProps {
 
 export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
   useEffect(() => {
-    const leftText = document.getElementById("left-text")!;
-    const rightText = document.getElementById("right-text")!;
-    const path = document.getElementById("path") as SVGPathElement | null;
+  const leftText = document.getElementById("left-text")!;
+  const rightText = document.getElementById("right-text")!;
+  const path = document.getElementById("path") as SVGPathElement | null;
+  const rect = document.getElementById("fullscreen-rect");
 
-    if (!path) return;
+  if (!path || !rect) return;
 
-    const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+  const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 
-    tl.to("#svg-stage", { duration: 0.7, opacity: 1 }, 0.25)
-      .from(path, { duration: 3.8, drawSVG: 0 }, 0.28)
-      .to(path, { duration: 2, drawSVG: "100% 93%", ease: "power2" }, "-=2")
-      .add(() => {
-        const len = path.getTotalLength();
-        const point = path.getPointAtLength(len);
-        gsap.set(leftText, { x: point.x - 150, y: point.y - 20 });
-        gsap.set(rightText, { x: point.x + 20, y: point.y - 20 });
-      })
-      .fromTo(
-        leftText,
-        { opacity: 1, scaleX: 0, transformOrigin: "left center" },
-        { scaleX: 1, duration: 0.8, ease: "elastic.out(1, 0.5)" }
-      )
-      .fromTo(
-        rightText,
-        { opacity: 1, scaleX: 0, transformOrigin: "right center" },
-        {
-          scaleX: 1,
-          duration: 0.8,
-          ease: "elastic.out(1, 0.5)",
-          onComplete: () => {
-            if (onComplete) onComplete(); // <-- appeler la prop ici
-          },
-        }
-      );
-  }, [onComplete]);
+  tl.to("#svg-stage", { duration: 0.7, opacity: 1 }, 0.25)
+    .from(path, { duration: 3.8, drawSVG: 0 }, 0.28)
+    .to(path, { duration: 2, drawSVG: "100% 93%", ease: "power2" }, "-=2")
+    .add(() => {
+      const len = path.getTotalLength();
+      const point = path.getPointAtLength(len);
+      gsap.set(leftText, { x: point.x - 150, y: point.y - 20 });
+      gsap.set(rightText, { x: point.x + 20, y: point.y - 20 });
+    })
+    .fromTo(
+      leftText,
+      { opacity: 1, scaleX: 0, transformOrigin: "left center" },
+      { scaleX: 1, duration: 0.8, ease: "elastic.out(1, 0.5)" }
+    )
+    .fromTo(
+      rightText,
+      { opacity: 1, scaleX: 0, transformOrigin: "right center" },
+      {
+        scaleX: 1,
+        duration: 0.8,
+        ease: "elastic.out(1, 0.5)",
+        onComplete: () => {
+          // Après apparition du texte, lancer l'animation du rectangle
+          gsap.to(rect, {
+            width: "100vw",
+            height: "100vh",
+            duration: 1,
+            delay: 0.3,
+            ease: "power2.inOut",
+            onComplete: () => {
+              // Appeler onComplete seulement après que le rectangle a rempli l'écran
+              if (onComplete) onComplete();
+            },
+          });
+        },
+      }
+    );
+}, [onComplete]);
+
 
   return (
     <div className="animation">
       <div className="svg_container">
-        <svg id="svg-stage" viewBox="0 0 1442 900" preserveAspectRatio="xMidYMid meet">
+        <svg
+          id="svg-stage"
+          viewBox="0 0 1442 900"
+          preserveAspectRatio="xMidYMid meet"
+        >
           <path
             id="path"
             fill="none"
@@ -68,6 +85,7 @@ export default function IntroAnimation({ onComplete }: IntroAnimationProps) {
           </text>
         </svg>
       </div>
+      <div id="fullscreen-rect" className="fullscreen-rect" />
     </div>
   );
 }
