@@ -25,7 +25,8 @@
       }
 
       .name {
-        display: inline-block;
+        display: inline-block; // important pour GSAP translateY
+        position: relative;    // pour que y fonctionne
         color: var(--foreground);
       }
 
@@ -38,6 +39,26 @@
         .intro-tache {
           font-weight: 400;
           font-size: 1.8rem;
+        }
+      }
+
+      .name-container {
+        position: relative;
+        display: inline-block;
+
+        span {
+          display: inline-block;
+          position: relative; // pour les translations GSAP
+        }
+
+        .full-name {
+          position: absolute;
+          top: 0;
+          left: 0;
+          white-space: nowrap;
+          color: var(--foreground);
+          opacity: 0;         // invisible par défaut
+          pointer-events: none; // pour que le hover reste sur le surnom
         }
       }
     }
