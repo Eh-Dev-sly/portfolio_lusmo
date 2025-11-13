@@ -6,18 +6,18 @@
   --font-primary: var(--font-fraunces); /* nouvelle variable pour Fraunces */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-primary); /* remplace l’ancienne font */
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background:#4C4333;
     --foreground: #FFF2DC;
+    height: 100vh;
   }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
