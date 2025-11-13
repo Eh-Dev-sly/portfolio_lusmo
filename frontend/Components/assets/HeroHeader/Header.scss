@@ -17,16 +17,28 @@
     align-items: center;
     text-align: center;
 
-    .intro_text {
+    .intro-text {
       text-align: center;
 
-      .text_title {
+      .text-title {
         margin-bottom: 1rem;
       }
 
       .name {
         display: inline-block;
         color: var(--foreground);
+      }
+
+      .intro-taches {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .intro-tache {
+          font-weight: 400;
+          font-size: 1.8rem;
+        }
       }
     }
   }
