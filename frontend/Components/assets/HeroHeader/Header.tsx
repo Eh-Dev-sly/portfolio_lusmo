@@ -7,7 +7,7 @@ import "@/Components/assets/HeroHeader/Header.scss";
 export default function HeroSection() {
   const fullNameRef = useRef<HTMLSpanElement>(null);
   const shortNameRef = useRef<HTMLSpanElement>(null);
-  const containerRef = useRef<HTMLSpanElement>(null);
+  const containerRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     const fln = fullNameRef.current;
@@ -18,6 +18,7 @@ export default function HeroSection() {
     // Masquer le nom complet au départ
     gsap.set(stn, { opacity: 1, y: 0 }); // short name normal
     gsap.set(fln, { opacity: 0, y: -10 }); // full name légèrement en haut
+    gsap.set(fln, { x: 0}); // full name légèrement en haut
 
     // Survol
     container.addEventListener("mouseenter", () => {
@@ -25,6 +26,8 @@ export default function HeroSection() {
       gsap.to(stn, { opacity: 0, y: 10, duration: 0.4, ease: "power2.out" });
       // Full name descend
       gsap.to(fln, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" });
+      // Container bouge
+      gsap.to(container, {x:-60, duration: 0.4, ease: "power2.out" });
     });
 
     // Quand la souris quitte
@@ -33,6 +36,8 @@ export default function HeroSection() {
       gsap.to(stn, { opacity: 1, y: 0, duration: 0.4, ease: "power2.in" });
       // Full name disparaît
       gsap.to(fln, { opacity: 0, y: -10, duration: 0.4, ease: "power2.in" });
+      // Container retourne à sa place
+      gsap.to(container, {x:0, delay: 0.3, duration: 0.4, ease: "power2.out" });
     });
   }, []);
 
@@ -40,9 +45,9 @@ export default function HeroSection() {
     <section className="home">
       <div className="intro-wrapper">
         <div className="intro-text">
-          <h1 className="text-title">
+          <h1 className="text-title" ref={containerRef}>
             Hey, je m’appelle Eh
-            <span className="name-container" ref={containerRef}>
+            <span className="name-container" >
               <span ref={shortNameRef}>-Nouelig</span>
               <span className="full-name" ref={fullNameRef}>
                 ouarn-Nouelig
