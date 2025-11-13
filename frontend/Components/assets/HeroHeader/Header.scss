@@ -1,6 +1,33 @@
-body {
+.home {
   font-family: var(--font-primary), serif;
   font-weight: 700;
   font-size: 3rem;
   color: var(--foreground);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100%;
+
+  .intro-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .intro_text {
+      text-align: center;
+
+      .text_title {
+        margin-bottom: 1rem;
+      }
+
+      .name {
+        display: inline-block;
+        color: var(--foreground);
+      }
+    }
+  }
 }
