@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    cursor: default;
 
     .intro-text {
       text-align: center;
@@ -25,20 +26,54 @@
       }
 
       .name {
-        display: inline-block; // important pour GSAP translateY
-        position: relative;    // pour que y fonctionne
+        display: inline-block;
+        position: relative;
         color: var(--foreground);
       }
 
       .intro-taches {
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        position: relative;
+        width: 100%;
+        min-height: 80px;
 
-        .intro-tache {
+        .mask {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4=');
+          -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4=');
+          mask-repeat: no-repeat;
+          -webkit-mask-repeat: no-repeat;
+          
+          background-color: var(--foreground);
+          pointer-events: none;
+          z-index: 20;
+        }
+
+        .intro-tache-outlined {
+          position: relative;
+          width: 100%;
+          text-align: center;
           font-weight: 400;
-          font-size: 1.8rem;
+          font-size: 2rem;
+          -webkit-text-stroke: 2px var(--foreground);
+          color: transparent;
+          z-index: 10;
+        }
+
+        .intro-tache-filled {
+          width: 100%;
+          text-align: center;
+          font-weight: 400;
+          font-size: 2rem;
+          color: var(--background);
+          padding: 0 1rem;
         }
       }
 
@@ -48,7 +83,7 @@
 
         span {
           display: inline-block;
-          position: relative; // pour les translations GSAP
+          position: relative;
         }
 
         .full-name {
@@ -57,8 +92,8 @@
           left: 0;
           white-space: nowrap;
           color: var(--foreground);
-          opacity: 0;         // invisible par défaut
-          pointer-events: none; // pour que le hover reste sur le surnom
+          opacity: 0;
+          pointer-events: none;
         }
       }
     }
