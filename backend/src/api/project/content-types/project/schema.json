@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Year": {
+      "type": "biginteger"
+    },
+    "Role": {
+      "type": "enumeration",
+      "enum": [
+        "Front-end Developer",
+        "Back-end Developer",
+        "Full-stack Developer",
+        "UI/UX Designer",
+        "Mobile Developer",
+        "DevOps / Infrastructure",
+        "Database Administrator",
+        "QA / Test Engineer",
+        "Project Manager",
+        "Product Designer",
+        "Web Designer",
+        "API Developer",
+        "Game Developer",
+        "Software Engineer",
+        "Technical Lead"
+      ]
+    },
+    "ImageProject": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ScreenOfProject": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Slug": {
+      "type": "string"
+    },
+    "Tags": {
+      "type": "enumeration",
+      "default": "React",
+      "enum": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS / SCSS / Sass",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "PostgreSQL",
+        "SQLite",
+        "GraphQL",
+        "REST API",
+        "Strapi",
+        "Framer Motion",
+        "GSAP",
+        "Redux / Zustand",
+        "Three.js",
+        "WebGL",
+        "Firebase",
+        "Supabase",
+        "Docker",
+        "Vercel",
+        "Netlify"
+      ]
+    }
+  }
+}

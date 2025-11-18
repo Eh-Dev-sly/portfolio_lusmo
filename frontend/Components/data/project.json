@@ -1,0 +1,79 @@
+[
+  {
+    "id": "p1",
+    "title": "Kasa",
+    "slug": "kasa-booking-platform",
+    "year": 2024,
+    "tags": ["React", "SCSS", "Responsive"],
+    "thumbnail": "/images/projects/kasa-thumb.webp",
+    "images": [
+      "/images/projects/kasa-1.webp",
+      "/images/projects/kasa-2.webp"
+    ],
+    "description": "Refonte complète du front-end d’une plateforme de location. Mise en place de composants réutilisables, gestion dynamique des données, et animations de transitions.",
+    "github": "https://github.com/yourname/kasa",
+    "website": "https://kasa-demo.com",
+    "role": "Front-End Developer"
+  },
+  {
+    "id": "p2",
+    "title": "Nova Studio",
+    "slug": "nova-interactive-portfolio",
+    "year": 2025,
+    "tags": ["Next.js", "GSAP", "Framer Motion", "3D"],
+    "thumbnail": "/images/projects/nova-thumb.webp",
+    "images": [
+      "/images/projects/nova-1.webp",
+      "/images/projects/nova-2.webp",
+      "/images/projects/nova-3.webp"
+    ],
+    "description": "Portfolio expérimental avec animations complexes, transitions fluides et interactions basées sur le scroll. Intégration d’effets GSAP et optimisation des performances.",
+    "github": "https://github.com/yourname/nova-studio",
+    "website": "https://nova-studio.com",
+    "role": "Fullstack Developer"
+  },
+  {
+    "id": "p3",
+    "title": "TaskFlow",
+    "slug": "taskflow-todo-app",
+    "year": 2023,
+    "tags": ["React", "TypeScript", "Firebase"],
+    "thumbnail": "/images/projects/taskflow-thumb.webp",
+    "images": [
+      "/images/projects/taskflow-1.webp"
+    ],
+    "description": "Application permettant d’organiser et prioriser ses tâches. Authentification Firebase, base de données en temps réel et interface moderne.",
+    "github": "https://github.com/yourname/taskflow",
+    "website": null,
+    "role": "Front-End Developer"
+  },
+  {
+    "id": "p4",
+    "title": "WeatherCast",
+    "slug": "weathercast-dashboard",
+    "year": 2024,
+    "tags": ["Next.js", "API", "Charts"],
+    "thumbnail": "/images/projects/weathercast-thumb.webp",
+    "images": [
+      "/images/projects/weathercast-1.webp",
+      "/images/projects/weathercast-2.webp"
+    ],
+    "description": "Dashboard météo moderne intégrant une API OpenWeather, avec graphiques interactifs et mise en cache côté serveur.",
+    "github": "https://github.com/yourname/weathercast",
+    "website": "https://weathercast-app.com",
+    "role": "Fullstack Developer"
+  },
+  {
+    "id": "p5",
+    "title": "MotionCraft",
+    "slug": "motioncraft-animation-lib",
+    "year": 2025,
+    "tags": ["JavaScript", "Animations", "GSAP"],
+    "thumbnail": "/images/projects/motioncraft-thumb.webp",
+    "images": [],
+    "description": "Petite librairie JavaScript simplifiant des animations complexes : parallaxe, reveal on scroll, transitions fluides. Pensée pour être plug-and-play.",
+    "github": "https://github.com/yourname/motioncraft",
+    "website": null,
+    "role": "JavaScript Developer"
+  }
+]
