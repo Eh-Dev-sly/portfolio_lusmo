@@ -1,0 +1,22 @@
+.circle-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 30;
+  transition: transform 0.2s ease-out;
+}
+
+body.cursor-hover .circle {
+  transform: scale(7); 
+  opacity: 0.7; 
+  transition: transform 0.2s ease-out;
+}
