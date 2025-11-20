@@ -1,0 +1,52 @@
+.project{
+.project-wrapper {
+  font-family: var(--font-primary), serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--foreground);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100%;
+  padding-top: 2rem;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+  .projects-container {
+    padding: 1rem;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    box-sizing: border-box;
+    max-height: 600px;
+    overflow-y: auto; /* scroll seulement si nécessaire */
+    padding-right: 0.5rem; /* évite que le contenu soit coupé par la scrollbar */
+    margin-top: 3rem; /* espace entre h1 et la liste */
+    .project-card {
+      display: flex;
+      justify-content: right;
+
+      .project-link-content{
+      display: flex;
+        }
+    }
+    h2 {
+      cursor: pointer;
+    }
+  }
+}
+
+.projects-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+.projects-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+}

@@ -6,6 +6,10 @@
   --font-primary: var(--font-fraunces); /* nouvelle variable pour Fraunces */
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background:#4C4333;
