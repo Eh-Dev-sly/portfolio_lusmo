@@ -3,7 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-primary: var(--font-fraunces); /* nouvelle variable pour Fraunces */
+  --font-primary: var(--font-fraunces);
+  --dashboard-font-primary: var(--font-roboto);
+  --dashboard-bck: #151d2c;
+  --dashboard-sidebar: #192237;
+  --dashboard-textSoft: #b7bac1;
+
 }
 
 ::-webkit-scrollbar {
