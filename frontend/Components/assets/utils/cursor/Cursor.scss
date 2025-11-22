@@ -5,6 +5,7 @@
   pointer-events: none;
 }
 
+/* Style global de chaque cercle */
 .circle {
   height: 24px;
   width: 24px;
@@ -13,10 +14,35 @@
   pointer-events: none;
   z-index: 30;
   transition: transform 0.2s ease-out;
+  background-color: var(--background) !important;
+  border: 2px solid var(--foreground);
+}
+/* Hover sur les éléments data-cursor */
+body.cursor-hover .circle {
+  transform: scale(7);
+  opacity: 0.7;
+  background-color: var(--foreground) !important;
 }
 
-body.cursor-hover .circle {
-  transform: scale(7); 
-  opacity: 0.7; 
+/* State : lien */
+body.cursor-link .circle {
+  transform: scale(2);
+  border: 2px solid var(--foreground);
+  background-color: black;
+}
+
+/* Premier cercle en mode "lien" */
+body.cursor-link .circle:first-child {
+  border: 2px solid var(--foreground);
+  background-color: transparent !important;
   transition: transform 0.2s ease-out;
+}
+
+/* On masque les cercles secondaires en mode "lien" */
+body.cursor-link .circle:nth-child(n+2) {
+  opacity: 0;
+}
+
+*{
+  cursor: none;
 }

@@ -17,7 +17,7 @@ export default function HeroSection() {
   const { x, y } = useMousePositon();
   const [isHovered, setIsHovered] = useState(false);
 
-  const cursorSize = isHovered ? 168 : 24;
+  const cursorSize = isHovered ? 140 : 24;
 
   // Position relative pour le mask
   const getRelativePosition = () => {
@@ -139,10 +139,10 @@ export default function HeroSection() {
         </div>
 
         <div className="home_button">
-          <Link href="/projects" className="button-link">
+          <Link href="/projects" className="button-link" data-link-cursor>
             → voir mes projets
           </Link>
-          <Link href="/contact" className="button-link">
+          <Link href="/contact" className="button-link" data-link-cursor>
             → qui suis-je
           </Link>
         </div>

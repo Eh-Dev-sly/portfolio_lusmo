@@ -5,24 +5,20 @@ import "./Cursor.scss";
 
 export default function Cursor() {
   
-  // ---- Hover Grow Detection ----
   useEffect(() => {
-    const onMouseMove = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
+  const onMouseMove = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
 
-      if (target.closest("[data-cursor]")) {
-        document.body.classList.add("cursor-hover");
-      } else {
-        document.body.classList.remove("cursor-hover");
-      }
-    };
+    const isHover = target.closest("[data-cursor]");
+    const isLink = target.closest("[data-link-cursor]");
 
-    document.addEventListener("mousemove", onMouseMove);
+    document.body.classList.toggle("cursor-hover", !!isHover);
+    document.body.classList.toggle("cursor-link", !!isLink);
+  };
 
-    return () => {
-      document.removeEventListener("mousemove", onMouseMove);
-    };
-  }, []);
+  document.addEventListener("mousemove", onMouseMove);
+  return () => document.removeEventListener("mousemove", onMouseMove);
+}, []);
 
   // ---- Cursor Animation ----
   useEffect(() => {
