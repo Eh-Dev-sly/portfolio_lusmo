@@ -1,0 +1,18 @@
+* {
+  font-family: var(--dashboard-font-primary);
+}
+
+.dashboard {
+  display: flex;
+  background-color: var(--dashboard-bck);
+  height: 100vh;
+
+  .menu {
+    flex: 1;
+    background-color: var(--dashboard-sidebar);
+    padding: 20px;
+  }
+  p {
+    flex: 4;
+  }
+}
