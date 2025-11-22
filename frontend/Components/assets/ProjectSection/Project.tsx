@@ -38,7 +38,7 @@ export default function Project() {
             return (
               <div key={project.id} className="project-card">
                 <Link href={`/projects/${project.Slug}`}>
-                  <div className="project-link-content"data-cursor="grow">
+                  <div className="project-link-content" data-link-cursor>
                     <h4 className="project-title">{project.Title}</h4>
                     {" — "}
                     <p className="project-category">{project.Role}</p>
