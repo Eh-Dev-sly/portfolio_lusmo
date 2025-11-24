@@ -4,35 +4,35 @@ import { useEffect } from "react";
 import "./Cursor.scss";
 
 export default function Cursor() {
-  
+
+  // ---- Gestion du changement de curseur (hover / link) ----
   useEffect(() => {
-  const onMouseMove = (e: MouseEvent) => {
-    const target = e.target as HTMLElement;
+    const onMouseMove = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
 
-    const isHover = target.closest("[data-cursor]");
-    const isLink = target.closest("[data-link-cursor]");
+      const isHover = target.closest("[data-cursor]");
+      const isLink = target.closest("[data-link-cursor]");
 
-    document.body.classList.toggle("cursor-hover", !!isHover);
-    document.body.classList.toggle("cursor-link", !!isLink);
-  };
+      document.body.classList.toggle("cursor-hover", !!isHover);
+      document.body.classList.toggle("cursor-link", !!isLink);
+    };
 
-  document.addEventListener("mousemove", onMouseMove);
-  return () => document.removeEventListener("mousemove", onMouseMove);
-}, []);
+    document.addEventListener("mousemove", onMouseMove);
+    return () => document.removeEventListener("mousemove", onMouseMove);
+  }, []);
 
-  // ---- Cursor Animation ----
+  // ---- Animation du curseur ----
   useEffect(() => {
     const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
 
-    const colors = [
-        "#FFF2DC",
-    //   "#fff2dc", "#fbd3b8", "#f9b1a2", "#f38d9d", "#e16da6",
-    //   "#be56b9", "#a04bc8", "#993ed1", "#9030dc", "#8323e7",
-    //   "#7213f3", "#5900ff"
-    ];
+    // 🔥 FIX : on ajoute le typage custom aux cercles
+    const circles = Array.from(
+      document.querySelectorAll(".circle")
+    ) as Array<HTMLElement & { x: number; y: number }>;
 
-    circles.forEach((circle: any, index) => {
+    const colors = ["#FFF2DC"];
+
+    circles.forEach((circle, index) => {
       circle.x = 0;
       circle.y = 0;
       circle.style.backgroundColor = colors[index % colors.length];
@@ -47,12 +47,14 @@ export default function Cursor() {
       let x = coords.x;
       let y = coords.y;
 
-      circles.forEach((circle: any, index) => {
+      circles.forEach((circle, index) => {
         circle.style.left = x - 12 + "px";
         circle.style.top = y - 12 + "px";
 
-        circle.style.scale = (circles.length - index) / circles.length;
+        const scale = (circles.length - index) / circles.length;
+(circle.style as any).scale = String(scale);
 
+        // 🔥 nécessaires pour le lerp
         circle.x = x;
         circle.y = y;
 

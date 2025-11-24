@@ -19,7 +19,6 @@ export default function HeroSection() {
 
   const cursorSize = isHovered ? 140 : 24;
 
-  // Position relative pour le mask
   const getRelativePosition = () => {
     if (tachesContainerRef.current) {
       const rect = tachesContainerRef.current.getBoundingClientRect();
@@ -31,33 +30,25 @@ export default function HeroSection() {
     return { x: 0, y: 0 };
   };
 
-  // Animation du nom au survol
   useEffect(() => {
     const fln = fullNameRef.current;
     const stn = shortNameRef.current;
     const container = containerRef.current;
     if (!fln || !stn || !container) return;
 
-    // Masquer le nom complet au départ
     gsap.set(stn, { opacity: 1, y: 0 });
     gsap.set(fln, { opacity: 0, y: -10 });
 
-    // Survol du nom
     const onEnter = () => {
-      gsap.to(stn, { opacity: 0, y: 10, duration: 0.4, ease: "power2.out" });
-      gsap.to(fln, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" });
-      gsap.to(container, { x: -60, duration: 0.4, ease: "power2.out" });
+      gsap.to(stn, { opacity: 0, y: 10, duration: 0.4 });
+      gsap.to(fln, { opacity: 1, y: 0, duration: 0.4 });
+      gsap.to(container, { x: -60, duration: 0.4 });
     };
 
     const onLeave = () => {
-      gsap.to(stn, { opacity: 1, y: 0, duration: 0.4, ease: "power2.in" });
-      gsap.to(fln, { opacity: 0, y: -10, duration: 0.4, ease: "power2.in" });
-      gsap.to(container, {
-        x: 0,
-        delay: 0.3,
-        duration: 0.4,
-        ease: "power2.out",
-      });
+      gsap.to(stn, { opacity: 1, y: 0, duration: 0.4 });
+      gsap.to(fln, { opacity: 0, y: -10, duration: 0.4 });
+      gsap.to(container, { x: 0, delay: 0.3, duration: 0.4 });
     };
 
     container.addEventListener("mouseenter", onEnter);
@@ -73,17 +64,18 @@ export default function HeroSection() {
 
   return (
     <main>
-      {/* Curseur global */}
       <Cursor />
 
-      {/* Cercle de mask pour texte */}
+      {/* FIX ICI : Propriétés dans style, pas animate */}
       <motion.div
         className="mask-cursor"
         animate={{
-          WebkitMaskPosition: `${x - cursorSize / 2}px ${y - cursorSize / 2}px`,
           maskPosition: `${x - cursorSize / 2}px ${y - cursorSize / 2}px`,
-          WebkitMaskSize: `${cursorSize}px ${cursorSize}px`,
           maskSize: `${cursorSize}px ${cursorSize}px`,
+        }}
+        style={{
+          WebkitMaskPosition: `${x - cursorSize / 2}px ${y - cursorSize / 2}px`,
+          WebkitMaskSize: `${cursorSize}px ${cursorSize}px`,
         }}
         transition={{ type: "tween", ease: "backOut", duration: 0.4 }}
       />
@@ -110,19 +102,20 @@ export default function HeroSection() {
               ref={tachesContainerRef}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              data-cursor="grow"
             >
               <motion.div
                 className="mask"
                 animate={{
-                  WebkitMaskPosition: `${relativePosition.x - cursorSize / 2}px ${
-                    relativePosition.y - cursorSize / 2
-                  }px`,
                   maskPosition: `${relativePosition.x - cursorSize / 2}px ${
                     relativePosition.y - cursorSize / 2
                   }px`,
-                  WebkitMaskSize: `${cursorSize}px ${cursorSize}px`,
                   maskSize: `${cursorSize}px ${cursorSize}px`,
+                }}
+                style={{
+                  WebkitMaskPosition: `${relativePosition.x - cursorSize / 2}px ${
+                    relativePosition.y - cursorSize / 2
+                  }px`,
+                  WebkitMaskSize: `${cursorSize}px ${cursorSize}px`,
                 }}
                 transition={{ type: "tween", ease: "backOut", duration: 0.4 }}
               >
@@ -139,10 +132,10 @@ export default function HeroSection() {
         </div>
 
         <div className="home_button">
-          <Link href="/projects" className="button-link" data-link-cursor>
+          <Link href="/projects" className="button-link">
             → voir mes projets
           </Link>
-          <Link href="/contact" className="button-link" data-link-cursor>
+          <Link href="/contact" className="button-link">
             → qui suis-je
           </Link>
         </div>
