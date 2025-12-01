@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Merriweather } from "next/font/google";
 import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 import "./globals.css";
 
 // Fonts
-const fraunces = Fraunces({
+const merriweather = Merriweather({
   subsets: ["latin"],
-  weight: ["100","200","300","400","500","600","700","800","900"],
-  variable: "--font-fraunces",
+  weight: ["300","400","500","600","700","800","900"],
+  variable: "--font-merriweather",
 });
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100","200","300","400","500","600","700","800","900"],
   variable: "--font-roboto",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100","200","300","400","500","600","700","800","900"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +33,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className={`${fraunces.variable} ${roboto.variable}`}>
+    <html lang="fr" className={`${merriweather.variable} ${roboto.variable} ${poppins.variable}`}>
       <body className="antialiased">
         {children}
       </body>

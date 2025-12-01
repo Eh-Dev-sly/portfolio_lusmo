@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import useMousePositon from "@/Components/assets/utils/useMousePosition";
 import Cursor from "@/Components/assets/utils/cursor/Cursor";
@@ -38,11 +38,9 @@ export default function HeroSection() {
     const container = containerRef.current;
     if (!fln || !stn || !container) return;
 
-    // Masquer le nom complet au départ
     gsap.set(stn, { opacity: 1, y: 0 });
     gsap.set(fln, { opacity: 0, y: -10 });
 
-    // Survol du nom
     const onEnter = () => {
       gsap.to(stn, { opacity: 0, y: 10, duration: 0.4, ease: "power2.out" });
       gsap.to(fln, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" });
@@ -73,21 +71,18 @@ export default function HeroSection() {
 
   return (
     <main>
-      {/* Curseur global */}
+      {" "}
       <Cursor />
-
       {/* Cercle de mask pour texte */}
-      <motion.div
+      <div
         className="mask-cursor"
-        animate={{
+        style={{
           WebkitMaskPosition: `${x - cursorSize / 2}px ${y - cursorSize / 2}px`,
           maskPosition: `${x - cursorSize / 2}px ${y - cursorSize / 2}px`,
           WebkitMaskSize: `${cursorSize}px ${cursorSize}px`,
           maskSize: `${cursorSize}px ${cursorSize}px`,
         }}
-        transition={{ type: "tween", ease: "backOut", duration: 0.4 }}
       />
-
       <section className="home">
         <div className="intro-wrapper">
           <div className="intro-text">
@@ -114,17 +109,16 @@ export default function HeroSection() {
             >
               <motion.div
                 className="mask"
-                animate={{
-                  WebkitMaskPosition: `${relativePosition.x - cursorSize / 2}px ${
-                    relativePosition.y - cursorSize / 2
-                  }px`,
+                style={{
+                  WebkitMaskPosition: `${
+                    relativePosition.x - cursorSize / 2
+                  }px ${relativePosition.y - cursorSize / 2}px`,
                   maskPosition: `${relativePosition.x - cursorSize / 2}px ${
                     relativePosition.y - cursorSize / 2
                   }px`,
                   WebkitMaskSize: `${cursorSize}px ${cursorSize}px`,
                   maskSize: `${cursorSize}px ${cursorSize}px`,
                 }}
-                transition={{ type: "tween", ease: "backOut", duration: 0.4 }}
               >
                 <span className="intro-tache-filled">
                   passionné de nouvelles technologies
@@ -143,8 +137,11 @@ export default function HeroSection() {
             → voir mes projets
           </Link>
           <Link href="/contact" className="button-link" data-link-cursor>
-            → qui suis-je
+            → a propos
           </Link>
+          {/* <Link href="/dashboard" className="button-link" data-link-cursor>
+        → dashboard test
+      </Link> */}
         </div>
       </section>
     </main>

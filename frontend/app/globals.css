@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-primary: var(--font-fraunces);
+  --background: #EAE0D5;
+  --foreground: #131A2A;
+  --font-primary: var(--font-merriweather);
+  --font-cta: var(--font-poppins);
   --dashboard-font-primary: var(--font-roboto);
   --dashboard-bck: #151d2c;
   --dashboard-sidebar: #192237;
@@ -17,8 +18,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background:#4C4333;
-    --foreground: #FFF2DC;
+    --background: #131A2A;
+    --foreground: #EAE0D5;
     height: 100vh;
   }
 }
@@ -32,5 +33,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-primary), serif; /* utilise maintenant Fraunces */
+  font-family: var(--font-primary), serif;
+}
+
+a{
+  font-family: var(--font-cta), serif;
 }
