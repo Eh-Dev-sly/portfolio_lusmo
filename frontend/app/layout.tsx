@@ -37,8 +37,8 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${merriweather.variable} ${roboto.variable} ${poppins.variable}`}>
       <body className="antialiased">
-        <NavBar />
         <Cursor />
+        <NavBar />
 
         {children}
       </body>

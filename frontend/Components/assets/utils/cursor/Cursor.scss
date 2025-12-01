@@ -12,7 +12,7 @@
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 30;
+  z-index: 50;
   transition: transform 0.2s ease-out;
   background-color: var(--background) !important;
   border: 2px solid var(--foreground);
@@ -44,5 +44,5 @@ body.cursor-link .circle:nth-child(n+2) {
 }
 
 *{
-  cursor: none;
+  cursor: default;
 }
