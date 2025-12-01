@@ -1,14 +1,22 @@
+"use client";
+
+import { useState } from "react";
+
 import "@/Components/assets/NavBar/HeaderContent.scss";
 
+import { AnimatePresence } from "framer-motion";
+import Stairs from "@/Components/assets/NavBar/BurgerMenu/Stairs/Stairs.tsx";
+import Menu from "@/Components/assets/NavBar/BurgerMenu/Menu/Menu.tsx";
 import BurgerMenu from "@/Components/assets/NavBar/BurgerMenu/BurgerMenu.tsx";
 
 export default function NavBar() {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
     <div className="navBar">
       <div className="logo">
         <svg
-          width="100" // Tu peux changer la taille ici
-          height="48" // Ajusté pour garder les proportions
+          width="100"
+          height="48"
           viewBox="0 0 373 179"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -35,7 +43,15 @@ export default function NavBar() {
           <li className="change-language"></li>
           <li className="change-theme"></li>
           <li className="burger-menu">
-            <BurgerMenu />
+            <BurgerMenu openMenu={() => {setMenuIsOpen(true)}}/>
+            <AnimatePresence mode="wait">
+            {
+                menuIsOpen && <>
+                <Stairs />
+                <Menu closeMenu={() => {setMenuIsOpen(false)}}/>
+                </>
+            }
+            </AnimatePresence>
           </li>
         </ul>
       </div>

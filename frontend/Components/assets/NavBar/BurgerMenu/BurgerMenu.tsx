@@ -1,51 +1,16 @@
-"use client";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
-import "./BurgerMenu.scss";
+'use client';
+import './BurgerMenu.scss';
 
-export default function SlidingStairsMenu() {
-  const [open, setOpen] = useState(false);
+export default function BurgerMenu({openMenu}) {
 
-  // Bloquer le scroll du body quand le menu est ouvert
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }, [open]);
-
-  const menuVariants = {
-    closed: { x: "100%" },
-    open: { x: 0 }
-  };
-
-  return (
-    <>
-      <button className="menu-toggle" onClick={() => setOpen(true)}>
-        ☰
-      </button>
-
-      <AnimatePresence>
-        {open && (
-          <motion.nav
-            className="sliding-menu"
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={menuVariants}
-            transition={{ type: "spring", stiffness: 260, damping: 30 }}
-          >
-            <button className="menu-close" onClick={() => setOpen(false)}>✕</button>
-            <ul>
-              <li><Link href="/">Accueil</Link></li>
-              <li><Link href="/about">À propos</Link></li>
-              <li><Link href="/projects">Projets</Link></li>
-            </ul>
-          </motion.nav>
-        )}
-      </AnimatePresence>
-    </>
-  );
+    return (
+        <div onClick={() => {openMenu()}} className="button">
+            <div className="background"></div>
+            <svg width="56" height="7" viewBox="0 0 56 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="56" y1="0.5" x2="4.37114e-08" y2="0.500005" stroke="white"/>
+                <line x1="56" y1="6.5" x2="28" y2="6.5" stroke="white"/>
+            </svg>
+            <p>Menu</p>
+        </div>
+    )
 }
