@@ -4,6 +4,7 @@
   --background: #EAE0D5;
   --foreground: #131A2A;
   --font-primary: var(--font-merriweather);
+  --font-secondary: var(--font-roboto);
   --font-cta: var(--font-poppins);
   --dashboard-font-primary: var(--font-roboto);
   --dashboard-bck: #151d2c;

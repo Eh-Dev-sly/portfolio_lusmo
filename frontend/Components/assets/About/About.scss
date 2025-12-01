@@ -1,0 +1,48 @@
+.about {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+
+  .about-pres {
+    width: 75%;
+    padding: 100px 50px;
+    .pres-title {
+      border-bottom: 5px solid var(--foreground);
+      padding: 0 0 1rem 0;
+
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    .pres-desc {
+      width: 75%;
+      p {
+        letter-spacing: 2px;
+        line-height: 40px;
+        margin: 24px 0;
+        font-family: var(--font-secondary);
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .about-pics {
+    width: 25%;
+    position: relative;
+    img {
+      object-fit: cover;
+      position: absolute;
+      inset: 0px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 90%;
+      width: 100%;
+      padding-right: 50px;
+      border-radius: 0 0 0 50px;
+      mix-blend-mode: lighten;
+    }
+  }
+}

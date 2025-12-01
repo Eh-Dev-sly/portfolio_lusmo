@@ -136,7 +136,7 @@ export default function HeroSection() {
           <Link href="/projects" className="button-link" data-link-cursor>
             → voir mes projets
           </Link>
-          <Link href="/contact" className="button-link" data-link-cursor>
+          <Link href="/about" className="button-link" data-link-cursor>
             → a propos
           </Link>
           {/* <Link href="/dashboard" className="button-link" data-link-cursor>

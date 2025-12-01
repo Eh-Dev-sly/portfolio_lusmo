@@ -1,5 +1,5 @@
-import Project from "@/Components/assets/ProjectSection/Project";
+import About from "@/Components/assets/About/About.tsx";
 
 export default function ProjectsPage() {
-  return <Project />;
+  return <About />;
 }
