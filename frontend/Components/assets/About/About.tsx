@@ -1,12 +1,8 @@
 import "@/Components/assets/About/About.scss";
-import Cursor from "@/Components/assets/utils/cursor/Cursor";
-import Particles from "@/Components/assets/Particle/ParticlesBackground"
 
 export default function AboutPage() {
   return (
     <section className="about">
-        <Cursor />
-        <Particles />
       <div className="about-pres">
         <div className="pres-title">
           <h1>À propos</h1>

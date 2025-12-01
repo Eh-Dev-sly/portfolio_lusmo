@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 // ---- Styles pour le curseur global avec masque ----
 .mask-cursor {
   position: fixed;
@@ -13,7 +20,7 @@
   -webkit-mask-size: 80px 80px;
   pointer-events: none;
   background-color: transparent;
-  z-index: 40; // Entre le curseur (30) et le masque de texte (50)
+  z-index: 40;
 }
 
 .home {
@@ -27,15 +34,18 @@
   justify-content: center;
   align-items: center;
 
+  // IMPORTANT : ajoute un padding-top pour compenser la navbar fixe
+  padding-top: 60px; // Correspond à la hauteur de ta navbar
   height: 100vh;
   width: 100%;
+  box-sizing: border-box; // Pour que le padding soit inclus dans les 100vh
 
   .intro-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    cursor: none; // Cache le curseur par défaut dans cette zone
+    cursor: none;
 
     .intro-text {
       text-align: center;
@@ -58,7 +68,7 @@
         .intro-tache-filled,
         .intro-tache-outlined {
           display: inline-block;
-          font-size: 2rem; // Réduit de 64px pour être plus lisible
+          font-size: 2rem;
           line-height: 1.2;
           cursor: none;
           padding: 0;
@@ -85,7 +95,7 @@
           z-index: 50;
 
           .intro-tache-filled {
-            color: var(--background); // Changé de background à foreground
+            color: var(--background);
             z-index: 50;
           }
         }
@@ -127,7 +137,7 @@
     margin-top: 2rem;
 
     .button-link {
-      cursor: none; // Cache le curseur par défaut
+      cursor: none;
       font-size: 1rem;
       padding: 0.5rem 1rem;
       transition: all 0.3s ease;

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import useMousePositon from "@/Components/assets/utils/useMousePosition";
-import Cursor from "@/Components/assets/utils/cursor/Cursor";
 import "@/Components/assets/HeroHeader/Header.scss";
 
 export default function HeroSection() {
@@ -72,7 +71,6 @@ export default function HeroSection() {
   return (
     <main>
       {" "}
-      <Cursor />
       {/* Cercle de mask pour texte */}
       <div
         className="mask-cursor"

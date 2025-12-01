@@ -2,7 +2,7 @@
 
 :root {
   --background: #EAE0D5;
-  --foreground: #131A2A;
+  --foreground: #131a2a;
   --font-primary: var(--font-merriweather);
   --font-secondary: var(--font-roboto);
   --font-cta: var(--font-poppins);
@@ -17,13 +17,13 @@
   display: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #131A2A;
     --foreground: #EAE0D5;
     height: 100vh;
   }
-}
+} */
 
 * {
   margin: 0;

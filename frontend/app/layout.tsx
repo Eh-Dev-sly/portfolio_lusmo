@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 import { Roboto } from "next/font/google";
 import { Poppins } from "next/font/google";
+import NavBar from "@/Components/assets/NavBar/HeaderContent.tsx";
+import Cursor from "@/Components/assets/utils/cursor/Cursor.tsx";
 
 import "./globals.css";
 
@@ -35,6 +37,9 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${merriweather.variable} ${roboto.variable} ${poppins.variable}`}>
       <body className="antialiased">
+        <NavBar />
+        <Cursor />
+
         {children}
       </body>
     </html>
