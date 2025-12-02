@@ -5,9 +5,9 @@ import { useState } from "react";
 import "@/Components/assets/NavBar/HeaderContent.scss";
 
 import { AnimatePresence } from "framer-motion";
-import Stairs from "@/Components/assets/NavBar/BurgerMenu/Stairs/Stairs.tsx";
-import Menu from "@/Components/assets/NavBar/BurgerMenu/Menu/Menu.tsx";
-import BurgerMenu from "@/Components/assets/NavBar/BurgerMenu/BurgerMenu.tsx";
+import Stairs from "@/Components/assets/NavBar/BurgerMenu/Stairs/Stairs";
+import Menu from "@/Components/assets/NavBar/BurgerMenu/Menu/Menu";
+import BurgerMenu from "@/Components/assets/NavBar/BurgerMenu/BurgerMenu";
 
 export default function NavBar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
