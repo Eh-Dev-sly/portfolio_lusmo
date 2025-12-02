@@ -1,6 +1,6 @@
-import { Variants, transition } from "framer-motion";
+import { Variants } from "framer-motion";
 
-export const height = {
+export const height: Variants = {
     initial: { height: 0 },
     enter: (i: number) => ({
         height: "100%",
@@ -12,7 +12,7 @@ export const height = {
     })
 }
 
-export const background = {
+export const background: Variants = {
     initial: { opacity: 0 },
     enter: {
         opacity: 0.5,
@@ -30,7 +30,7 @@ export const opacity: Variants = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: "easeInOut", // string standard accepté
+      ease: "easeInOut",
       delay: custom * 0.1,
     },
   }),
@@ -42,13 +42,14 @@ export const opacity: Variants = {
     },
   },
 };
-export const slideLeft = {
+
+export const slideLeft: Variants = {
     initial: { x: 150 },
     enter: { x: 0, transition: { duration: 0.5, ease: "easeInOut" } },
     exit: { x: 150, transition: { duration: 0.5, ease: "easeInOut" } }
 }
 
-export const rotateX = {
+export const rotateX: Variants = {
     initial: { rotateX: 90, opacity: 0 },
     enter: (i: number) => ({
         rotateX: 0,

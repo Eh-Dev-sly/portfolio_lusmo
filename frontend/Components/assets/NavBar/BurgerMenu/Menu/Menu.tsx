@@ -21,7 +21,6 @@ const menu = [
   },
 ];
 
-
 export default function Menu({ closeMenu }: { closeMenu: () => void }) {
   return (
     <motion.div
@@ -92,7 +91,11 @@ export default function Menu({ closeMenu }: { closeMenu: () => void }) {
         >
           IN
         </a>
-        <a href="https://www.tiktok.com/@lusmo_dev" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.tiktok.com/@lusmo_dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           TK
         </a>
       </motion.div>

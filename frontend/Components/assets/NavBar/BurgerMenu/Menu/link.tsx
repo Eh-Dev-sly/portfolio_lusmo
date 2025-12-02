@@ -6,13 +6,22 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 
-export default function link({data, index}) {
-    const { title, description, href } = data;
-    const outer = useRef(null);
-    const inner = useRef(null);
+interface LinkProps {
+  data: {
+    title: string;
+    description: string;
+    href: string;
+  };
+  index: number;
+}
 
-    const manageMouseEnter = (e) => {
-        const bounds = e.target.getBoundingClientRect();
+export default function link({ data, index }: LinkProps) {
+    const { title, description, href } = data;
+    const outer = useRef<HTMLDivElement>(null);
+    const inner = useRef<HTMLDivElement>(null);
+
+    const manageMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+        const bounds = e.currentTarget.getBoundingClientRect();
         if(e.clientY < bounds.top + (bounds.height / 2)){
             gsap.set(outer.current, {top: "-100%"})
             gsap.set(inner.current, {top: "100%"})
@@ -25,8 +34,8 @@ export default function link({data, index}) {
         gsap.to(inner.current, {top: "0%",  duration: 0.3})
     }
 
-    const manageMouseLeave = (e) => {
-        const bounds = e.target.getBoundingClientRect();
+    const manageMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+        const bounds = e.currentTarget.getBoundingClientRect();
         if(e.clientY < bounds.top + (bounds.height / 2)){
             gsap.to(outer.current, {top: "-100%", duration: 0.3})
             gsap.to(inner.current, {top: "100%",  duration: 0.3})
