@@ -1,6 +1,6 @@
 .button{
     width: 150px;
-    height: 30px;
+    height: 60px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     cursor: pointer;
 
     p{
-        display: none;
+        display: block;
         color: white;
         margin: 0px;
         text-transform: uppercase;
@@ -55,11 +55,12 @@
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media (max-width: 900px) {
     .button{
-        height: 120px;
+        height: 50px;
+        width: 100px;
         p{
-            display: block;
+            display: none;
         }
     }
 }

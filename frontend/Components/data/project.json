@@ -1,204 +1,151 @@
 [
   {
-    "id": "p11",
-    "title": "Kasa",
-    "slug": "kasa-location-immobiliere",
-    "year": 2024,
-    "category": "Front-End React",
-    "tags": ["React", "React Router", "SCSS", "Responsive"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
-    "images": [
-      "/images/projects/kasa-1.webp",
-      "/images/projects/kasa-2.webp",
-      "/images/projects/kasa-3.webp"
-    ],
-    "description": "Refonte complète du front-end d'une plateforme de location immobilière entre particuliers...",
-    "github": "https://github.com/Eh-Dev-sly/kasa",
-    "website": null,
-    "role": "Front-End React Developer",
-    "skills": ["React", "React Router", "SCSS", "Responsive Design", "Components"]
-  },
-  {
-    "id": "p10",
-    "title": "724 Events",
-    "slug": "724events-agence-evenementiel",
-    "year": 2024,
-    "category": "Debug & Tests",
-    "tags": ["React", "Debug", "Tests", "Jest"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
-    "images": [
-      "/images/projects/724events-1.webp",
-      "/images/projects/724events-2.webp"
-    ],
-    "description": "Debug et optimisation d'un site vitrine pour une agence d'événementiel...",
-    "github": "https://github.com/Eh-Dev-sly/724events",
-    "website": null,
-    "role": "Front-End Developer",
-    "skills": ["React", "Debugging", "Jest", "React Testing Library", "Optimization"]
-  },
-  {
-    "id": "p9",
-    "title": "ArgentBank",
-    "slug": "argentbank-banking-app",
-    "year": 2024,
-    "category": "Front-End React",
-    "tags": ["React", "Redux", "API REST", "Authentication"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
-    "images": [
-      "/images/projects/argentbank-1.webp",
-      "/images/projects/argentbank-2.webp",
-      "/images/projects/argentbank-3.webp"
-    ],
-    "description": "Application bancaire complète avec authentification sécurisée...",
-    "github": "https://github.com/Eh-Dev-sly/argentbank",
-    "website": null,
-    "role": "Front-End Developer",
-    "skills": ["React", "Redux", "API REST", "JWT", "Authentication", "State Management"]
-  },
-  {
-    "id": "p8",
-    "title": "Nina Carducci - Photographe",
-    "slug": "nina-carducci-seo-optimization",
-    "year": 2024,
-    "category": "SEO & Performance",
-    "tags": ["SEO", "Lighthouse", "Accessibility", "Performance"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
-    "images": [
-      "/images/projects/nina-1.webp",
-      "/images/projects/nina-2.webp"
-    ],
-    "description": "Optimisation complète SEO d'un site de photographe...",
-    "github": "https://github.com/Eh-Dev-sly/nina-carducci",
-    "website": null,
-    "role": "SEO & Performance Specialist",
-    "skills": ["SEO", "Lighthouse", "Web Performance", "Accessibility", "Schema.org"]
-  },
-  {
     "id": "p7",
-    "title": "Sophie Bluel - Architecte",
-    "slug": "sophie-bluel-portfolio-dynamique",
-    "year": 2023,
-    "category": "JavaScript Vanilla",
-    "tags": ["JavaScript", "API", "DOM", "Authentication"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
-    "images": [
-      "/images/projects/sophie-1.webp",
-      "/images/projects/sophie-2.webp",
-      "/images/projects/sophie-3.webp"
+    "title": "Portfolio - Lusmo Dev",
+    "slug": "portfolio-lusmo",
+    "year": 2025,
+    "category": "Front-End Next.js & WebDesign",
+    "categories": [
+      "Branding",
+      "Front-End",
+      "SCSS",
+      "Responsive Design",
+      "Components"
     ],
-    "description": "Portfolio dynamique pour une architecte d'intérieur avec panneau d'administration...",
-    "github": "https://github.com/Eh-Dev-sly/sophie-bluel",
-    "website": null,
-    "role": "Front-End JavaScript Developer",
-    "skills": ["JavaScript", "API REST", "DOM Manipulation", "Authentication", "CRUD"]
+    "tags": ["Next.js", "Framer Motion", "SCSS", "Responsive"],
+    "thumbnail": "/images/projects/portfolio-lusmo/cover-project.png",
+    "images": [
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive1.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive2.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive3.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive4.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive5.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive6.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive7.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive8.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive9.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive10.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive11.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive12.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive13.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive14.JPG",
+      "/images/projects/portfolio-lusmo/Template_charte_graphique/Diapositive15.JPG"
+    ],
+    "description": "Conception et développement complet du portfolio de mon entreprise Lusmo, incluant la création de la charte graphique, le design des pages, l'implémentation front-end avec Next.js et SCSS, ainsi que l'intégration des animations avec Framer Motion. Le projet est entièrement responsive et optimisé pour offrir une expérience utilisateur fluide sur tous les appareils.",
+    "github": "https://github.com/Eh-Dev-sly/portfolio_lusmo",
+    "website": "https://lusmo-portfolio.vercel.app/",
+    "role": "Front-End Next.js Developer & Webdesigner",
+    "skills": [
+      "React",
+      "React Router",
+      "SCSS",
+      "Responsive Design",
+      "Components"
+    ]
   },
   {
     "id": "p6",
-    "title": "Menu Maker by Qwenta",
-    "slug": "qwenta-menu-maker-planning",
-    "year": 2023,
+    "title": "Menu Maker - Qwenta",
+    "slug": "qwenta-menu-maker",
+    "year": 2024,
     "category": "Gestion de Projet",
-    "tags": ["Agile", "Kanban", "Specifications", "Project Management"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
-    "images": [
-      "/images/projects/qwenta-1.webp"
-    ],
-    "description": "Planification du développement du site Menu Maker...",
+    "tags": ["Agile", "Kanban", "Documentation"],
+    "thumbnail": "/images/projects/qwenta/cover.webp",
+    "images": ["/images/projects/qwenta/qwenta-1.webp"],
+    "description": "Conception du cahier des charges et élaboration du planning pour le projet Menu Maker selon une méthode de gestion Agile.",
     "github": null,
     "website": null,
-    "role": "Project Manager & Technical Lead",
-    "skills": ["Agile", "Kanban", "Technical Specifications", "Project Planning", "Tech Watch"]
+    "role": "Project Manager",
+    "skills": ["Agile", "Kanban", "Wireframes", "Documentation"]
   },
   {
     "id": "p5",
-    "title": "Ohmyfood",
-    "slug": "ohmyfood-restaurant-booking",
-    "year": 2023,
-    "category": "Intégration & Animations",
-    "tags": ["Sass", "Animations CSS", "Mobile First", "Responsive"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
+    "title": "Mon Vieux Grimoire",
+    "slug": "mon-vieux-grimoire",
+    "year": 2024,
+    "category": "Back-End",
+    "tags": ["Node.js", "MongoDB", "API", "Auth"],
+    "thumbnail": "/images/projects/grimoire/cover.webp",
     "images": [
-      "/images/projects/ohmyfood-1.webp",
-      "/images/projects/ohmyfood-2.webp",
-      "/images/projects/ohmyfood-3.webp"
+      "/images/projects/grimoire/grimoire-1.webp",
+      "/images/projects/grimoire/grimoire-2.webp"
     ],
-    "description": "Site mobile-first pour une startup de réservation de restaurants gastronomiques...",
-    "github": "https://github.com/Eh-Dev-sly/ohmyfood",
+    "description": "Développement complet du back-end pour un site de notation de livres : API sécurisée, authentification JWT, gestion des images et base de données MongoDB.",
+    "github": "https://github.com/Eh-Dev-sly/mon-vieux-grimoire",
     "website": null,
-    "role": "Front-End Developer",
-    "skills": ["Sass", "CSS Animations", "Mobile First", "Responsive Design", "BEM"]
+    "role": "Back-End Developer",
+    "skills": ["Node.js", "Express", "MongoDB", "Multer", "Auth JWT"]
   },
   {
     "id": "p4",
-    "title": "Print-it",
-    "slug": "print-it-carousel-javascript",
-    "year": 2023,
-    "category": "JavaScript Vanilla",
-    "tags": ["JavaScript", "DOM", "Event Listeners", "Carousel"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
+    "title": "Nina Carducci - Optimisation SEO",
+    "slug": "nina-carducci-seo",
+    "year": 2024,
+    "category": "SEO",
+    "tags": ["SEO", "Performance", "Accessibility"],
+    "thumbnail": "/images/projects/nina/cover.webp",
     "images": [
-      "/images/projects/printit-1.webp",
-      "/images/projects/printit-2.webp"
+      "/images/projects/nina/nina-1.webp",
+      "/images/projects/nina/nina-2.webp"
     ],
-    "description": "Dynamisation du site statique d'une imprimerie...",
-    "github": "https://github.com/Eh-Dev-sly/printit",
+    "description": "Optimisation SEO complète d’un site de photographe : amélioration des performances, structure des balises, accessibilité et score Google Lighthouse.",
+    "github": "https://github.com/Eh-Dev-sly/nina-carducci",
     "website": null,
-    "role": "JavaScript Developer",
-    "skills": ["JavaScript", "DOM Manipulation", "Event Listeners", "Carousel", "Animations"]
+    "role": "SEO Specialist",
+    "skills": ["SEO", "Performance", "Accessibility", "Lighthouse"]
   },
   {
     "id": "p3",
-    "title": "Booki",
-    "slug": "booki-agence-voyage",
+    "title": "Kasa - Location Immobilière",
+    "slug": "kasa",
     "year": 2023,
-    "category": "HTML/CSS",
-    "tags": ["HTML", "CSS", "Flexbox", "Responsive"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
+    "category": "React Front-End",
+    "tags": ["React", "Router", "Components"],
+    "thumbnail": "/images/projects/kasa/cover.webp",
     "images": [
-      "/images/projects/booki-1.webp",
-      "/images/projects/booki-2.webp",
-      "/images/projects/booki-3.webp"
+      "/images/projects/kasa/kasa-1.webp",
+      "/images/projects/kasa/kasa-2.webp"
     ],
-    "description": "Création de la page d'accueil d'une agence de voyage...",
-    "github": "https://github.com/Eh-Dev-sly/booki",
+    "description": "Refonte complète de l’application Kasa en React avec un système de routage, gestion des états et composants réutilisables.",
+    "github": "https://github.com/Eh-Dev-sly/kasa",
     "website": null,
     "role": "Front-End Developer",
-    "skills": ["HTML5", "CSS3", "Flexbox", "Responsive Design", "Figma Integration"]
+    "skills": ["React", "Routing", "Components", "Responsive Design"]
   },
   {
     "id": "p2",
-    "title": "Riding Cities",
-    "slug": "riding-cities-skate-association",
+    "title": "Sophie Bluel - Portfolio Dynamique",
+    "slug": "sophie-bluel",
     "year": 2023,
-    "category": "HTML/CSS",
-    "tags": ["HTML", "CSS", "Git", "GitHub"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
+    "category": "JavaScript",
+    "tags": ["JavaScript", "API", "Modales"],
+    "thumbnail": "/images/projects/sophie/cover.webp",
     "images": [
-      "/images/projects/ridingcities-1.webp"
+      "/images/projects/sophie/sophie-1.webp",
+      "/images/projects/sophie/sophie-2.webp"
     ],
-    "description": "Mise à jour de la page d'accueil d'une association de skateboard...",
-    "github": "https://github.com/Eh-Dev-sly/ridingcities",
+    "description": "Création d’un portfolio dynamique en JavaScript avec gestion des filtres, modales, authentification et appels API.",
+    "github": "https://github.com/Eh-Dev-sly/sophie-bluel",
     "website": null,
-    "role": "Junior Developer",
-    "skills": ["HTML", "CSS", "Git", "GitHub", "Version Control"]
+    "role": "JavaScript Developer",
+    "skills": ["JavaScript", "API", "DOM", "Modals"]
   },
   {
     "id": "p1",
-    "title": "Portfolio - Lusmo Dev",
-    "slug": "portfolio-lusmo",
-    "year": 2024,
-    "category": "Fullstack",
-    "tags": ["Next.js", "TypeScript", "MongoDB", "Framer Motion", "GSAP"],
-    "thumbnail": "https://cdn.pixabay.com/photo/2025/08/15/06/29/mountain-cabin-9776289_1280.jpg",
+    "title": "Booki - Intégration Maquette",
+    "slug": "booki",
+    "year": 2023,
+    "category": "HTML / CSS",
+    "tags": ["HTML", "CSS", "Responsive"],
+    "thumbnail": "/images/projects/booki/cover-project.png",
     "images": [
-      "/images/projects/portfolio-1.webp",
-      "/images/projects/portfolio-2.webp",
-      "/images/projects/portfolio-3.webp"
+      "/images/projects/booki/booki-1.webp",
+      "/images/projects/booki/booki-2.webp"
     ],
-    "description": "Portfolio personnel moderne avec animations complexes...",
-    "github": "https://github.com/Eh-Dev-sly/portfolio_lusmo",
-    "website": "https://lusmo-portfolio.vercel.app",
-    "role": "Fullstack Developer",
-    "skills": ["Next.js", "TypeScript", "MongoDB", "Express.js", "Framer Motion", "GSAP", "Vercel", "Railway"]
+    "description": "Intégration complète de la maquette Booki en HTML/CSS avec mise en page responsive et design fidèle à la maquette Figma.",
+    "github": "https://github.com/Eh-Dev-sly/BOOKI-Projet-2-",
+    "website": null,
+    "role": "Front-End Developer",
+    "skills": ["HTML", "CSS", "Responsive", "Flexbox"]
   }
 ]

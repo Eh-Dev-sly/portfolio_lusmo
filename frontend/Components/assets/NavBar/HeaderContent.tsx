@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import "@/Components/assets/NavBar/HeaderContent.scss";
 
@@ -11,9 +12,15 @@ import BurgerMenu from "@/Components/assets/NavBar/BurgerMenu/BurgerMenu";
 
 export default function NavBar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const router = useRouter();
+
   return (
     <div className="navBar">
-      <div className="logo">
+      <div 
+        className="logo"
+        onClick={() => router.push("/")} 
+        style={{ cursor: "pointer" }}
+      >
         <svg
           width="100"
           height="48"
@@ -38,19 +45,21 @@ export default function NavBar() {
           </g>
         </svg>
       </div>
+
       <div className="navBar-list">
         <ul>
           <li className="change-language"></li>
           <li className="change-theme"></li>
           <li className="burger-menu">
-            <BurgerMenu openMenu={() => {setMenuIsOpen(true)}}/>
+            <BurgerMenu openMenu={() => setMenuIsOpen(true)} />
+            
             <AnimatePresence mode="wait">
-            {
-                menuIsOpen && <>
-                <Stairs />
-                <Menu closeMenu={() => {setMenuIsOpen(false)}}/>
+              {menuIsOpen && (
+                <>
+                  <Stairs />
+                  <Menu closeMenu={() => setMenuIsOpen(false)} />
                 </>
-            }
+              )}
             </AnimatePresence>
           </li>
         </ul>

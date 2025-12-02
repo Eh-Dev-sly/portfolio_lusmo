@@ -45,3 +45,52 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .about {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+
+    .about-pres {
+      width: 100%;
+      padding: 2rem 1rem;
+
+      .pres-title {
+        border-bottom: 3px solid var(--foreground);
+        padding-bottom: 0.5rem;
+
+        h1 {
+          font-size: 2.2rem; // réduire la taille du titre
+        }
+      }
+
+      .pres-desc {
+        width: 100%;
+
+        p {
+          font-size: 1rem;   // texte plus petit pour mobile
+          line-height: 1.6rem;
+          margin: 1rem 0;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .about-pics {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin-top: 1rem;
+
+      img {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        border-radius: 0 0 0 20px; // garder un peu de style
+      }
+    }
+  }
+}

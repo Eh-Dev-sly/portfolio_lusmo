@@ -19,7 +19,7 @@ export default function Project() {
           {projects.length > 0 ? (
             projects.map((project) => (
               <div key={project.id} className="project-card">
-                <Link href={`/projects/${project.title}`}>
+                <Link key={project.id} href={`/projects/${project.slug}`}>
                   <div className="project-link-content" data-link-cursor>
                     {/* Image de couverture */}
                     <div className="project-cover-image">
