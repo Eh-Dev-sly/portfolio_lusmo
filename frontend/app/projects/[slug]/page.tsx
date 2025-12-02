@@ -89,31 +89,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         <div className="project-description">
           <p>{project.description}</p>
-        </div>
-      </div>
 
-      {/* LIENS GitHub et Website */}
-      <div className="project-links">
-        {project.github && (
-          <a 
-            href={project.github} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="project-link github-link"
-          >
-            <span>🔗</span> Voir sur GitHub
-          </a>
-        )}
-        {project.website && (
-          <a 
-            href={project.website} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="project-link website-link"
-          >
-            <span>🌐</span> Voir le site
-          </a>
-        )}
+          {/* LIENS GitHub et Website */}
+          <div className="project-links">
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link github-link"
+              >
+                Voir sur GitHub
+              </a>
+            )}
+            {project.website && (
+              <a
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link website-link"
+              >
+                Voir le site
+              </a>
+            )}
+          </div>
+        </div>
       </div>
 
       {/* IMAGES */}

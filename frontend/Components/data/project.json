@@ -50,8 +50,18 @@
     "year": 2024,
     "category": "Gestion de Projet",
     "tags": ["Agile", "Kanban", "Documentation"],
-    "thumbnail": "/images/projects/qwenta/cover.webp",
-    "images": ["/images/projects/qwenta/qwenta-1.webp"],
+    "thumbnail": "/images/projects/qwenta/cover-project.png",
+    "images": [
+      "/images/projects/qwenta/screen-project/1.png",
+      "/images/projects/qwenta/screen-project/2.png",
+      "/images/projects/qwenta/screen-project/3.png",
+      "/images/projects/qwenta/screen-project/4.png",
+      "/images/projects/qwenta/screen-project/5.png",
+      "/images/projects/qwenta/screen-project/6.png",
+      "/images/projects/qwenta/screen-project/7.png",
+      "/images/projects/qwenta/screen-project/8.png",
+      "/images/projects/qwenta/screen-project/9.png"
+    ],
     "description": "Conception du cahier des charges et élaboration du planning pour le projet Menu Maker selon une méthode de gestion Agile.",
     "github": null,
     "website": null,
@@ -65,10 +75,15 @@
     "year": 2024,
     "category": "Back-End",
     "tags": ["Node.js", "MongoDB", "API", "Auth"],
-    "thumbnail": "/images/projects/grimoire/cover.webp",
+    "thumbnail": "/images/projects/mon-vieux-grimoire/cover-project.png",
     "images": [
-      "/images/projects/grimoire/grimoire-1.webp",
-      "/images/projects/grimoire/grimoire-2.webp"
+      "/images/projects/mon-vieux-grimoire/screen-project/1.png",
+      "/images/projects/mon-vieux-grimoire/screen-project/2.png",
+      "/images/projects/mon-vieux-grimoire/screen-project/3.png",
+      "/images/projects/mon-vieux-grimoire/screen-project/4.png",
+      "/images/projects/mon-vieux-grimoire/screen-project/5.png",
+      "/images/projects/mon-vieux-grimoire/screen-project/6.png",
+      "/images/projects/mon-vieux-grimoire/screen-project/6.png"
     ],
     "description": "Développement complet du back-end pour un site de notation de livres : API sécurisée, authentification JWT, gestion des images et base de données MongoDB.",
     "github": "https://github.com/Eh-Dev-sly/mon-vieux-grimoire",
@@ -83,10 +98,14 @@
     "year": 2024,
     "category": "SEO",
     "tags": ["SEO", "Performance", "Accessibility"],
-    "thumbnail": "/images/projects/nina/cover.webp",
+    "thumbnail": "/images/projects/nina-carducci/cover-project.webp",
     "images": [
-      "/images/projects/nina/nina-1.webp",
-      "/images/projects/nina/nina-2.webp"
+      "/images/projects/nina-carducci/screen-project/1.png",
+      "/images/projects/nina-carducci/screen-project/2.png",
+      "/images/projects/nina-carducci/screen-project/3.png",
+      "/images/projects/nina-carducci/screen-project/4.png",
+      "/images/projects/nina-carducci/screen-project/5.png",
+      "/images/projects/nina-carducci/screen-project/6.png"
     ],
     "description": "Optimisation SEO complète d’un site de photographe : amélioration des performances, structure des balises, accessibilité et score Google Lighthouse.",
     "github": "https://github.com/Eh-Dev-sly/nina-carducci",
@@ -101,10 +120,12 @@
     "year": 2023,
     "category": "React Front-End",
     "tags": ["React", "Router", "Components"],
-    "thumbnail": "/images/projects/kasa/cover.webp",
+    "thumbnail": "/images/projects/kasa/cover-project.svg",
     "images": [
-      "/images/projects/kasa/kasa-1.webp",
-      "/images/projects/kasa/kasa-2.webp"
+      "/images/projects/kasa/screen-project/1.png",
+      "/images/projects/kasa/screen-project/2.png",
+      "/images/projects/kasa/screen-project/3.png",
+      "/images/projects/kasa/screen-project/4.png"
     ],
     "description": "Refonte complète de l’application Kasa en React avec un système de routage, gestion des états et composants réutilisables.",
     "github": "https://github.com/Eh-Dev-sly/kasa",
@@ -119,10 +140,13 @@
     "year": 2023,
     "category": "JavaScript",
     "tags": ["JavaScript", "API", "Modales"],
-    "thumbnail": "/images/projects/sophie/cover.webp",
+    "thumbnail": "/images/projects/sophie-bluel/cover-project.png",
     "images": [
-      "/images/projects/sophie/sophie-1.webp",
-      "/images/projects/sophie/sophie-2.webp"
+      "/images/projects/sophie-bluel/screen-project/1.png",
+      "/images/projects/sophie-bluel/screen-project/2.png",
+      "/images/projects/sophie-bluel/screen-project/3.png",
+      "/images/projects/sophie-bluel/screen-project/4.png",
+      "/images/projects/sophie-bluel/screen-project/5.png"
     ],
     "description": "Création d’un portfolio dynamique en JavaScript avec gestion des filtres, modales, authentification et appels API.",
     "github": "https://github.com/Eh-Dev-sly/sophie-bluel",
