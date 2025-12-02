@@ -1,0 +1,21 @@
+.contact {
+  .contact-wrapper {
+    margin-top: 60px;
+    padding-top: 2rem;
+    .header-title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .contact-content {
+      padding: 0 270px;
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-family: var(--font-secondary);
+      font-size: 1.2rem;
+      line-height: 2.5rem;
+    }
+  }
+}
