@@ -1,7 +1,7 @@
 'use client';
 import './BurgerMenu.scss';
 
-export default function BurgerMenu({openMenu}) {
+export default function BurgerMenu({ openMenu }: { openMenu: () => void }) {
 
     return (
         <div onClick={() => {openMenu()}} className="button">
