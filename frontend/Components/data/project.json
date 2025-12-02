@@ -86,7 +86,7 @@
       "/images/projects/mon-vieux-grimoire/screen-project/6.png"
     ],
     "description": "Développement complet du back-end pour un site de notation de livres : API sécurisée, authentification JWT, gestion des images et base de données MongoDB.",
-    "github": "https://github.com/Eh-Dev-sly/mon-vieux-grimoire",
+    "github": "https://github.com/Eh-Dev-sly/MON-VIEUX-GRIMOIRE-Projet-6",
     "website": null,
     "role": "Back-End Developer",
     "skills": ["Node.js", "Express", "MongoDB", "Multer", "Auth JWT"]
@@ -108,7 +108,7 @@
       "/images/projects/nina-carducci/screen-project/6.png"
     ],
     "description": "Optimisation SEO complète d’un site de photographe : amélioration des performances, structure des balises, accessibilité et score Google Lighthouse.",
-    "github": "https://github.com/Eh-Dev-sly/nina-carducci",
+    "github": "https://github.com/Eh-Dev-sly/NINA-CARDUCCI-Projet-4",
     "website": null,
     "role": "SEO Specialist",
     "skills": ["SEO", "Performance", "Accessibility", "Lighthouse"]
@@ -128,7 +128,7 @@
       "/images/projects/kasa/screen-project/4.png"
     ],
     "description": "Refonte complète de l’application Kasa en React avec un système de routage, gestion des états et composants réutilisables.",
-    "github": "https://github.com/Eh-Dev-sly/kasa",
+    "github": "https://github.com/Eh-Dev-sly/KASA-Projet-5",
     "website": null,
     "role": "Front-End Developer",
     "skills": ["React", "Routing", "Components", "Responsive Design"]
@@ -149,7 +149,7 @@
       "/images/projects/sophie-bluel/screen-project/5.png"
     ],
     "description": "Création d’un portfolio dynamique en JavaScript avec gestion des filtres, modales, authentification et appels API.",
-    "github": "https://github.com/Eh-Dev-sly/sophie-bluel",
+    "github": "https://github.com/Eh-Dev-sly/SOPHIE-BLUEL-Projet-3-",
     "website": null,
     "role": "JavaScript Developer",
     "skills": ["JavaScript", "API", "DOM", "Modals"]
@@ -163,8 +163,7 @@
     "tags": ["HTML", "CSS", "Responsive"],
     "thumbnail": "/images/projects/booki/cover-project.png",
     "images": [
-      "/images/projects/booki/booki-1.webp",
-      "/images/projects/booki/booki-2.webp"
+      "/images/projects/booki/screen-project/1.png"
     ],
     "description": "Intégration complète de la maquette Booki en HTML/CSS avec mise en page responsive et design fidèle à la maquette Figma.",
     "github": "https://github.com/Eh-Dev-sly/BOOKI-Projet-2-",
