@@ -46,3 +46,16 @@ body.cursor-link .circle:nth-child(n+2) {
 *{
   cursor: default;
 }
+
+/* Masquer le curseur sur tablette et mobile */
+@media (max-width: 900px) {
+  .circle-cursor,
+  .circle {
+    display: none;
+  }
+
+  /* Optionnel : revenir au curseur système normal */
+  body {
+    cursor: default;
+  }
+}

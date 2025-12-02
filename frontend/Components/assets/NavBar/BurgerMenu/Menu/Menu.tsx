@@ -14,11 +14,11 @@ const menu = [
     description: "Decouvrez Qui Je Suis",
     href: "/about", // <-- chemin vers la page A Propos
   },
-  {
-    title: "Contact",
-    description: "Mail et non pigeon voyageur",
-    href: "/contact", // <-- chemin vers la page Contact
-  },
+  // {
+  //   title: "Contact",
+  //   description: "Mail et non pigeon voyageur",
+  //   href: "/contact", // <-- chemin vers la page Contact
+  // },
 ];
 
 export default function Menu({ closeMenu }: { closeMenu: () => void }) {
