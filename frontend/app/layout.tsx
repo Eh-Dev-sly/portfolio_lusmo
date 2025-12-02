@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 import { Roboto } from "next/font/google";
 import { Poppins } from "next/font/google";
-import NavBar from "@/Components/assets/NavBar/HeaderContent.tsx";
-import Cursor from "@/Components/assets/utils/cursor/Cursor.tsx";
+import NavBar from "@/Components/assets/NavBar/HeaderContent";
+import Cursor from "@/Components/assets/utils/cursor/Cursor";
 
 import "./globals.css";
 
