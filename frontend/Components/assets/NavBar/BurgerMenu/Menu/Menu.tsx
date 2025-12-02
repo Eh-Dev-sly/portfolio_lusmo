@@ -30,6 +30,7 @@ export default function Menu({ closeMenu }: { closeMenu: () => void }) {
       initial="initial"
       animate="enter"
       exit="exit"
+      custom={0}
     >
       <div className={styles.header}>
         <motion.svg

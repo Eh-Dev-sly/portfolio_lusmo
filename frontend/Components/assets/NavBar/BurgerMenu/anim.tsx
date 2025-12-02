@@ -26,13 +26,13 @@ export const background = {
 
 export const opacity = {
   initial: { opacity: 0 },
-  enter: (i: number) => ({
+  enter: (custom: number) => ({
     opacity: 1,
-    transition: { duration: 0.5, ease: "easeInOut", delay: i * 0.1 },
+    transition: { duration: 0.5, ease: [0.33, 1, 0.68, 1], delay: custom * 0.1 },
   }),
-  exit: {
-    opacity: 0,
-    transition: { duration: 0.3, ease: "easeInOut" },
+  exit: { 
+    opacity: 0, 
+    transition: { duration: 0.3, ease: [0.33, 1, 0.68, 1] } 
   },
 };
 
