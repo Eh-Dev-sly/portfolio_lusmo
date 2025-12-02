@@ -13,7 +13,8 @@
 
     p{
         display: block;
-        color: white;
+        color: --background;
+        font-family: var(--font-cta);
         margin: 0px;
         text-transform: uppercase;
         transition: color 0.5s;

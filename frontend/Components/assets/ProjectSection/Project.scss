@@ -82,11 +82,11 @@
 
       /* Scrollbar custom */
       &::-webkit-scrollbar {
-        width: 6px;
+        width: 7px;
       }
 
       &::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: var(--foreground);
         border-radius: 3px;
       }
     }

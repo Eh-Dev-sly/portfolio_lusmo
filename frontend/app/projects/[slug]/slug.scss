@@ -7,6 +7,7 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-height: 100vh;
 
   // Couverture du projet
   .project-cover {
@@ -28,10 +29,11 @@ body, html {
   .project-intro {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
 
     .project-data,
     .project-description {
-      flex: 1; // même largeur
+      flex: 1 1 45%;
     }
 
     .project-data {
@@ -52,53 +54,41 @@ body, html {
           font-size: 1.5rem;
         }
 
-        ul {
+        ul, p {
           margin: 0;
-          padding: 7 0;
+          padding: 0;
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
           font-family: var(--font-cta);
         }
-
-        p {
-          margin: 0;
-          padding: 7 0;
-        }
       }
     }
 
     .project-description {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-left: 1rem;
 
-  p {
-    margin-bottom: 1rem;
-  }
+      p {
+        margin-bottom: 1rem;
+      }
 
-  .project-links {
-    margin-top: auto; // <-- pousse les boutons vers le bas
-  }
-}
+      .project-links {
+        margin-top: auto;
+      }
+    }
   }
 
   // Galerie d'images
   .project-images {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
+    flex-direction: column;
+    gap: 2rem;
 
-    div {
-      flex: 0 0 48%;
-
-      &.thumbnail {
-        flex: 0 0 100%;
-        margin-bottom: 1rem;
-      }
-
+    .image-container {
+      width: 100%;
       img {
         width: 100%;
         height: auto;
@@ -123,21 +113,6 @@ body, html {
     font-family: var(--font-cta);
   }
 
-  // Skills / stack
-  .skills-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-
-    span {
-      background-color: var(--secondary);
-      border-radius: 0.25rem;
-      padding: 0.2rem 0.5rem;
-      font-size: 0.9rem;
-      display: inline-block;
-    }
-  }
-
   // Liens
   a {
     display: inline-block;
@@ -151,60 +126,48 @@ body, html {
     }
   }
 
-  .project-images{
+  // Navigation projet suivant
+  .project-next {
+    border-top: 3px solid var(--foreground);
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .project-links {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    img{
-      border-radius: 0 !important;
-    width: 1000px;
-      height: 320px;
+    gap: 1rem;
   }
 
-}
-.project-next {
-  border-top: 3px solid var(--foreground);
-  padding-top: 1rem;
-  margin-bottom: 1rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  .project-link {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--foreground);
+    border: 1px solid var(--foreground);
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
 
-a {
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.2s;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.7;
+    &:hover {
+      background: var(--foreground);
+      color: var(--background);
+    }
   }
-}
-}
-
-.project-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.project-link {
-  display: block;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--foreground);
-  border: 1px solid var(--foreground);
-  padding: 10px 20px;
-  border-radius: 10px;
-  transition: 0.3s ease;
-  align-items: end;
-}
-
-.project-link:hover {
-  background: var(--foreground);
-  color: var(--background);
-}
-
 
   // Responsive
   @media (max-width: 768px) {
@@ -229,8 +192,8 @@ a {
     }
 
     .project-images {
-      div {
-        flex: 0 0 100%;
+      .image-container {
+        width: 100%;
       }
     }
   }
