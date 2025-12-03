@@ -1,22 +1,31 @@
 .contact-form {
   display: flex;
-  gap: 1.2rem;
-  width: 100%;
+  flex-direction: column;
+  gap: 2.5rem;
   width: 100%;
   overflow: hidden;
   font-family: var(--font-secondary);
 
-  .contact-form {
-  display: flex;
-  flex-direction: column; // Formulaire en colonne
-  gap: 2.5rem;
-  width: 100%;
-  overflow: hidden;
-
-    .choice{
+  .choice {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    
+    label {
       display: flex;
-      gap: 2rem;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
     }
+    
+    input[type="checkbox"],
+    input[type="radio"] {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+    }
+  }
 
   // Conteneur des champs côte à côte
   .form-fields {
@@ -26,11 +35,10 @@
 
     .input-option,
     .input-message {
-      flex: 1; // Les deux prennent la même largeur
+      flex: 1;
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
-
     }
   }
 
@@ -47,9 +55,9 @@
     &:focus {
       border-color: var(--second-color-brown);
     }
-
   }
-  select{
+
+  select {
     min-height: 65px;
   }
 
@@ -85,6 +93,28 @@
     font-size: 0.95rem;
     margin-top: 0.4rem;
   }
-}
 
+  // Responsive
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+
+    .choice {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .form-fields {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    textarea {
+      min-height: 150px;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
 }
