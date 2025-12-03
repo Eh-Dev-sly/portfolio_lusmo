@@ -13,12 +13,13 @@
     height: auto;
     width: 100%;
     padding-top: 2rem;
-    max-height: 90vh;
+    padding-bottom: 3rem;
 
     .header-title {
       font-size: 3rem;
       font-weight: 700;
       text-align: center;
+      margin-bottom: 2rem;
     }
 
     .projects-container {
@@ -27,7 +28,6 @@
       gap: 2rem;
       width: 100%;
       max-width: 1200px;
-      overflow-y: auto;
       padding-right: 0.5rem;
 
       .project-card {
@@ -79,22 +79,12 @@
           }
         }
       }
-
-      /* Scrollbar custom */
-      &::-webkit-scrollbar {
-        width: 7px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: var(--foreground);
-        border-radius: 3px;
-      }
     }
 
     /* --- Media Queries responsive --- */
     @media (max-width: 900px) {
       .projects-container {
-        grid-template-columns: 1fr; // 1 carte par ligne
+        grid-template-columns: 1fr;
         padding: 0 2rem;
       }
 

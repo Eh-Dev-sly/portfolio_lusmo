@@ -5,6 +5,11 @@ import Link from "./link";
 
 const menu = [
   {
+    title: "Accueil",
+    description: "C'est vrai qu'elle est belle cette page",
+    href: "/", // <-- chemin vers la page Projets
+  },
+  {
     title: "Projets",
     description: "Cliquez Pour Voir Tous Mes Projets",
     href: "/projects", // <-- chemin vers la page Projets
