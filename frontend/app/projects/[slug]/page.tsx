@@ -94,6 +94,15 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <div className="project-links">
             {project.github && (
               <a
+                href="/projects"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                Revenir sur la page Projet
+              </a>
+            )}
+            {project.github && (
+              <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"

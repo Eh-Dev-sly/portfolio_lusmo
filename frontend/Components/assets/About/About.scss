@@ -1,6 +1,8 @@
 .about {
-  height: 100vh;
   display: flex;
+  min-height: 100vh; // remplace height: 100vh pour permettre au contenu de pousser
+  overflow-x: hidden; // on garde le scroll vertical si besoin
+  flex-wrap: wrap; // pour que les enfants passent en colonne si nécessaire
 
   .about-pres {
     width: 75%;
@@ -51,25 +53,23 @@
           white-space: nowrap;
           cursor: pointer;
           margin-bottom: 2rem;
+
           span {
-    opacity: 0;
-    padding-right: 0.5rem;
-    display: none;
-    transform: translateY(5px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+            opacity: 0;
+            padding-right: 0.5rem;
+            display: none;
+            transform: translateY(5px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+          }
+
           &:hover {
             background: var(--second-color-pink);
             color: var(--foreground);
 
-               span {
-                display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-            
-            &::before {
-              left: 0;
+            span {
+              display: block;
+              opacity: 1;
+              transform: translateY(0);
             }
           }
 
@@ -87,32 +87,32 @@
     
     img {
       object-fit: cover;
-      position: absolute;
-      inset: 0px;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 90%;
       width: 100%;
-      padding-right: 50px;
+      height: 100%;
+      top: 0; // toujours en haut
+      left: 0;
       border-radius: 0 0 0 50px;
+      position: relative; // important pour mobile
     }
   }
 }
 
+/* Responsive */
 @media (max-width: 900px) {
   .about {
+    flex-direction: column;
+
     .about-pres {
       width: 100%;
-      
+      padding: 2rem;
+
       .pres-desc {
-        width: 90%;
-        
+        width: 100%;
+
         .skill_contact {
           flex-direction: column;
           gap: 1.5rem;
-          
+
           a {
             width: 100%;
             padding: 0.9rem 2rem;
@@ -122,7 +122,16 @@
     }
 
     .about-pics {
-      display: none;
+      width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 0 0 0 20px;
+        position: relative; // reste en haut
+      }
     }
   }
 }
@@ -130,7 +139,7 @@
 @media (max-width: 500px) {
   .about {
     flex-direction: column;
-    height: auto;
+    min-height: auto; // permet au contenu de pousser
     padding: 2rem 1rem;
 
     .about-pres {
@@ -159,7 +168,7 @@
         .skill_contact {
           margin-top: 1.5rem;
           gap: 1rem;
-          
+
           a {
             padding: 0.8rem 1.5rem;
             font-size: 1rem;
@@ -171,16 +180,13 @@
     .about-pics {
       width: 100%;
       height: auto;
-      position: relative;
-      margin-top: 1rem;
+      margin-bottom: 1rem;
 
       img {
-        position: relative;
-        inset: auto;
         width: 100%;
         height: auto;
-        padding: 0;
         border-radius: 0 0 0 20px;
+        position: relative; // reste en haut
       }
     }
   }

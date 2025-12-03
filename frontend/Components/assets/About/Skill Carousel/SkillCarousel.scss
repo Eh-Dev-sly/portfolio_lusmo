@@ -30,7 +30,6 @@
       .icon {
         width: 24px;
         height: 24px;
-        cursor: pointer;
       }
 
       &:hover:not(:disabled) {
@@ -66,7 +65,8 @@
         font-size: 0.9rem;
         font-weight: 600;
         white-space: nowrap;
-        animation: fadeIn 0.3s ease-out;
+        flex: 1 0 calc(25% - 1rem); /* 4 tags par ligne par défaut */
+        text-align: center;
         transition: transform 0.2s ease;
 
         &:hover {
@@ -93,7 +93,6 @@
       background-color: var(--foreground);
       cursor: pointer;
       transition: all 0.3s ease;
-      padding: 0;
 
       &:hover {
         background-color: rgba(0, 0, 0, 0.4);
@@ -108,19 +107,14 @@
     }
   }
 
-  /* Animation */
-.tags-wrapper {
-  display: flex;
-  gap: 1rem;
-
-  // Slide vers la droite
-  &.slide-right .tag {
-    animation: slideFromRight 0.35s ease both;
-  }
-
-  // Slide vers la gauche
-  &.slide-left .tag {
-    animation: slideFromLeft 0.35s ease both;
+  /* Animations */
+  .tags-wrapper {
+    &.slide-right .tag {
+      animation: slideFromRight 0.35s ease both;
+    }
+    &.slide-left .tag {
+      animation: slideFromLeft 0.35s ease both;
+    }
   }
 }
 
@@ -146,14 +140,21 @@
   }
 }
 
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    padding: 1.5rem 0.5rem;
-
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-carousel {
     .carousel-container {
-      padding: 1.5rem 1rem;
       gap: 0.75rem;
+
+      .tags-wrapper {
+        gap: 0.75rem;
+
+        .tag {
+          flex: 1 0 calc(33.33% - 0.75rem); /* 3 tags par slide tablette */
+          padding: 0.4rem 1rem;
+          font-size: 0.85rem;
+        }
+      }
 
       .carousel-button {
         width: 35px;
@@ -164,28 +165,32 @@
           height: 20px;
         }
       }
-
-      .tags-wrapper {
-        gap: 0.75rem;
-
-        .tag {
-          padding: 0.4rem 1rem;
-          font-size: 0.85rem;
-        }
-      }
     }
   }
+}
 
-  @media (max-width: 500px) {
+@media (max-width: 500px) {
+  .skill-carousel {
     .carousel-container {
-      padding: 1rem 0.75rem;
+      gap: 0.5rem;
 
       .tags-wrapper {
         gap: 0.5rem;
 
         .tag {
+          flex: 1 0 calc(50% - 0.5rem); /* 2 tags par slide mobile */
           padding: 0.35rem 0.85rem;
           font-size: 0.8rem;
+        }
+      }
+
+      .carousel-button {
+        width: 30px;
+        height: 30px;
+
+        .icon {
+          width: 18px;
+          height: 18px;
         }
       }
     }
