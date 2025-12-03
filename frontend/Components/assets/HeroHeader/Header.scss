@@ -204,7 +204,6 @@ padding-top: 45px;
 }
 
 .home_button {
-  flex-direction: column;
   gap: 0.75rem;
 
   .button-link {
@@ -223,10 +222,13 @@ padding-top: 40px;
 
 .intro-wrapper {
   .intro-text {
+    h2{
+      font-size: 1.1rem;
+    }
     .intro-taches {
       .intro-tache-filled,
       .intro-tache-outlined {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       .mask {
@@ -238,7 +240,10 @@ padding-top: 40px;
 }
 
 .home_button {
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.1rem;
 
   .button-link {
     font-size: 0.8rem;
