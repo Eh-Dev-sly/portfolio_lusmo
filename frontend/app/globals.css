@@ -25,7 +25,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--background);
+  background-color: var(--second-color-pink);
   border-radius: 10px; /* Ajustez aussi le border-radius proportionnellement */
 }
 

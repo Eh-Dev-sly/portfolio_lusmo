@@ -1,0 +1,243 @@
+[
+  {
+    "id": "s1",
+    "category": "Front-End",
+    "icon": "🎨",
+    "skills": [
+      {
+        "name": "HTML 5",
+        "level": "Expert"
+      },
+      {
+        "name": "CSS3 / SCSS",
+        "level": "Expert"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Avancé"
+      },
+      {
+        "name": "React",
+        "level": "Avancé"
+      },
+      {
+        "name": "Next.js",
+        "level": "Avancé"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Intermédiaire"
+      },
+      {
+        "name": "React Router",
+        "level": "Avancé"
+      },
+      {
+        "name": "Framer Motion",
+        "level": "Intermédiaire"
+      }
+    ]
+  },
+  {
+    "id": "s2",
+    "category": "Back-End",
+    "icon": "⚙️",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Avancé"
+      },
+      {
+        "name": "Express.js",
+        "level": "Avancé"
+      },
+      {
+        "name": "MongoDB",
+        "level": "Avancé"
+      },
+      {
+        "name": "API REST",
+        "level": "Avancé"
+      },
+      {
+        "name": "JWT Authentication",
+        "level": "Avancé"
+      },
+      {
+        "name": "Multer",
+        "level": "Intermédiaire"
+      },
+      {
+        "name": "Mongoose",
+        "level": "Avancé"
+      }
+    ]
+  },
+  {
+    "id": "s3",
+    "category": "Design & UX/UI",
+    "icon": "✨",
+    "skills": [
+      {
+        "name": "Figma",
+        "level": "Avancé"
+      },
+      {
+        "name": "Web Design",
+        "level": "Avancé"
+      },
+      {
+        "name": "Responsive Design",
+        "level": "Expert"
+      },
+      {
+        "name": "Wireframing",
+        "level": "Avancé"
+      },
+      {
+        "name": "Charte Graphique",
+        "level": "Avancé"
+      },
+      {
+        "name": "UI Components",
+        "level": "Avancé"
+      }
+    ]
+  },
+  {
+    "id": "s4",
+    "category": "SEO & Performance",
+    "icon": "🚀",
+    "skills": [
+      {
+        "name": "SEO On-Page",
+        "level": "Avancé"
+      },
+      {
+        "name": "Google Lighthouse",
+        "level": "Avancé"
+      },
+      {
+        "name": "Optimisation Performance",
+        "level": "Avancé"
+      },
+      {
+        "name": "Accessibilité Web",
+        "level": "Avancé"
+      },
+      {
+        "name": "Meta Tags & Schema",
+        "level": "Avancé"
+      },
+      {
+        "name": "Web Vitals",
+        "level": "Intermédiaire"
+      }
+    ]
+  },
+  {
+    "id": "s5",
+    "category": "Outils & Méthodologies",
+    "icon": "🛠️",
+    "skills": [
+      {
+        "name": "Git & GitHub",
+        "level": "Avancé"
+      },
+      {
+        "name": "Travail avec l'IA",
+        "level": "Avancé"
+      },
+      {
+        "name": "Méthode Agile",
+        "level": "Avancé"
+      },
+      {
+        "name": "Kanban",
+        "level": "Avancé"
+      },
+      {
+        "name": "Vercel",
+        "level": "Avancé"
+      },
+      {
+        "name": "VS Code",
+        "level": "Expert"
+      },
+      {
+        "name": "NPM / Yarn",
+        "level": "Avancé"
+      },
+      {
+        "name": "Documentation Technique",
+        "level": "Avancé"
+      },
+      {
+        "name": "Gestion de Projet",
+        "level": "Avancé"
+      }
+    ]
+  },
+  {
+    "id": "s6",
+    "category": "Sécurité & Bonnes Pratiques",
+    "icon": "🔒",
+    "skills": [
+      {
+        "name": "Authentification JWT",
+        "level": "Avancé"
+      },
+      {
+        "name": "Hashage de Mots de Passe",
+        "level": "Avancé"
+      },
+      {
+        "name": "CORS",
+        "level": "Intermédiaire"
+      },
+      {
+        "name": "Green Code",
+        "level": "Intermédiaire"
+      },
+      {
+        "name": "RGPD",
+        "level": "Intermédiaire"
+      },
+      {
+        "name": "Validation de Données",
+        "level": "Avancé"
+      }
+    ]
+  },
+  {
+    "id": "s7",
+    "category": "Soft Skills",
+    "icon": "💡",
+    "skills": [
+      {
+        "name": "Travail d'Équipe",
+        "level": "Avancé"
+      },
+      {
+        "name": "Communication",
+        "level": "Avancé"
+      },
+      {
+        "name": "Résolution de Problèmes",
+        "level": "Avancé"
+      },
+      {
+        "name": "Autonomie",
+        "level": "Avancé"
+      },
+      {
+        "name": "Veille Technologique",
+        "level": "Avancé"
+      },
+      {
+        "name": "Adaptabilité",
+        "level": "Avancé"
+      }
+    ]
+  }
+]

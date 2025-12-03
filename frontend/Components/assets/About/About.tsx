@@ -2,7 +2,16 @@ import "@/Components/assets/About/About.scss";
 
 import Link from "next/link";
 
+import SkillCarousel from "./Skill Carousel/SkillCarousel";
+
+import skillsData from "@/Components/data/perso.json";
+
 export default function AboutPage() {
+  // Extraire tous les noms de compétences de toutes les catégories
+  const allSkills = skillsData.flatMap(category => 
+    category.skills.map(skill => skill.name)
+  );
+
   return (
     <section className="about">
       <div className="about-pres">
@@ -19,7 +28,10 @@ export default function AboutPage() {
             constamment de nouvelles technologies pour proposer des solutions
             esthétiques et fonctionnelles.
           </p>
-          <Link href="/contact">Me contacter</Link>
+          <div className="skill_contact">
+          <SkillCarousel tags={allSkills} itemsPerPage={4} />
+          <Link href="/contact"><span>➜</span> Me contacter</Link>
+        </div>
         </div>
       </div>
       <div className="about-pics">

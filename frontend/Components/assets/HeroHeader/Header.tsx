@@ -137,6 +137,9 @@ export default function HeroSection() {
           <Link href="/about" className="button-link" data-link-cursor>
             → a propos
           </Link>
+          <Link href="/contact" className="button-link" data-link-cursor>
+            → me contacter
+          </Link>
           {/* <Link href="/dashboard" className="button-link" data-link-cursor>
         → dashboard test
       </Link> */}
