@@ -114,10 +114,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    // Test de code
     <html
       lang="fr"
       className={`${merriweather.variable} ${roboto.variable} ${poppins.variable}`}
     >
+      
       <body className="antialiased">
         <Cursor />
         <NavBar />
