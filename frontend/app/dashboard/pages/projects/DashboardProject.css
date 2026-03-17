@@ -1,0 +1,17 @@
+* {
+  font-family: var(--dashboard-font-primary);
+}
+
+.dashboard {
+  display: flex;
+  background-color: var(--dashboard-bck);
+  height: 100vh;
+}
+.dashboard .menu {
+  flex: 1;
+  background-color: var(--dashboard-sidebar);
+  padding: 20px;
+}
+.dashboard .project-wrapper {
+  flex: 4;
+}/*# sourceMappingURL=DashboardProject.css.map */

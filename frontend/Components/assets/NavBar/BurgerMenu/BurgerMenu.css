@@ -1,0 +1,58 @@
+.button {
+  width: 150px;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+.button p {
+  display: block;
+  color: var(--background);
+  font-family: var(--font-cta);
+  margin: 0px;
+  text-transform: uppercase;
+  transition: color 0.5s;
+}
+.button svg {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.button svg line {
+  transition: stroke 0.5s;
+}
+.button .background {
+  background-color: #8B635C;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  height: 0;
+  transition: height 0.3s;
+}
+.button:hover p {
+  color: #E4C1F9;
+}
+.button:hover svg line {
+  stroke: #E4C1F9;
+}
+.button:hover .background {
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .button {
+    height: 50px;
+    width: 100px;
+  }
+  .button p {
+    display: none;
+  }
+}/*# sourceMappingURL=BurgerMenu.css.map */

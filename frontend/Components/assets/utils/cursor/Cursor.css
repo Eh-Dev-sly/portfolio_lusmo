@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.circle-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Style global de chaque cercle */
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 50;
+  transition: transform 0.2s ease-out;
+  background-color: var(--background) !important;
+  border: 2px solid var(--foreground);
+}
+
+/* Hover sur les éléments data-cursor */
+body.cursor-hover .circle {
+  transform: scale(7);
+  opacity: 0.7;
+  background-color: var(--foreground) !important;
+}
+
+/* State : lien */
+body.cursor-link .circle {
+  transform: scale(2);
+  border: 2px solid var(--foreground);
+  background-color: black;
+}
+
+/* Premier cercle en mode "lien" */
+body.cursor-link .circle:first-child {
+  border: 2px solid var(--foreground);
+  background-color: transparent !important;
+  transition: transform 0.2s ease-out;
+}
+
+/* On masque les cercles secondaires en mode "lien" */
+body.cursor-link .circle:nth-child(n+2) {
+  opacity: 0;
+}
+
+* {
+  cursor: default;
+}
+
+/* Masquer le curseur sur tablette et mobile */
+@media (max-width: 900px) {
+  .circle-cursor,
+  .circle {
+    display: none;
+  }
+  /* Optionnel : revenir au curseur système normal */
+  body {
+    cursor: default;
+  }
+}/*# sourceMappingURL=Cursor.css.map */

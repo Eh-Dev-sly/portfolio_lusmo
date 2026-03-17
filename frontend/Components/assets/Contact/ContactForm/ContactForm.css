@@ -1,0 +1,104 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  overflow: hidden;
+  font-family: var(--font-secondary);
+}
+.contact-form .choice {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.contact-form .choice label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.contact-form .choice input[type=checkbox],
+.contact-form .choice input[type=radio] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+.contact-form .form-fields {
+  display: flex;
+  gap: 2.5rem;
+  width: 100%;
+}
+.contact-form .form-fields .input-option,
+.contact-form .form-fields .input-message {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px 16px;
+  border: 2px solid var(--foreground);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: var(--second-color-brown);
+}
+.contact-form select {
+  min-height: 65px;
+}
+.contact-form textarea {
+  height: 100%;
+  resize: none;
+}
+.contact-form button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--second-color-brown);
+  color: var(--background);
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-family: var(--font-cta);
+  letter-spacing: 3px;
+}
+.contact-form button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+.contact-form button:not(:disabled):hover {
+  background: var(--second-color-pink);
+  color: var(--foreground);
+}
+.contact-form .form-status {
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+}
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 1.5rem;
+  }
+  .contact-form .choice {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .contact-form .form-fields {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .contact-form textarea {
+    min-height: 150px;
+  }
+  .contact-form button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=ContactForm.css.map */

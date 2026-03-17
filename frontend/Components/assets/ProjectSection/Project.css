@@ -1,0 +1,94 @@
+.project .section-header {
+  margin-bottom: 3rem;
+}
+.project .project-wrapper {
+  font-family: var(--font-primary), serif;
+  color: var(--foreground);
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.project .project-wrapper .header-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.project .project-wrapper .projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 0.5rem;
+}
+.project .project-wrapper .projects-container .project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--foreground);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: var(--background);
+}
+.project .project-wrapper .projects-container .project-card .project-image {
+  background-color: var(--second-color-pink);
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.project .project-wrapper .projects-container .project-card .project-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+}
+.project .project-wrapper .projects-container .project-card .project-info .project-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: var(--font-merriweather);
+}
+.project .project-wrapper .projects-container .project-card .project-info .project-category {
+  font-size: 0.9rem;
+  color: var(--background);
+}
+.project .project-wrapper .projects-container .project-card .project-info .project-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.project .project-wrapper .projects-container .project-card .project-info .project-tags .tag {
+  background-color: var(--background);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: var(--foreground);
+}
+.project .project-wrapper {
+  /* --- Media Queries responsive --- */
+}
+@media (max-width: 900px) {
+  .project .project-wrapper .projects-container {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+  .project .project-wrapper .header-title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .project .project-wrapper .header-title {
+    font-size: 2rem;
+  }
+  .project .project-wrapper .project-info {
+    padding: 0.8rem;
+  }
+}/*# sourceMappingURL=Project.css.map */

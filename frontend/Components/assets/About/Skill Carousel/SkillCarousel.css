@@ -1,0 +1,170 @@
+@charset "UTF-8";
+.skill-carousel {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+  overflow: hidden;
+  font-family: var(--font-secondary);
+}
+.skill-carousel .carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 15px;
+  padding: 5px;
+}
+.skill-carousel .carousel-container .carousel-button {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--foreground);
+  color: var(--background);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.skill-carousel .carousel-container .carousel-button .icon {
+  width: 24px;
+  height: 24px;
+}
+.skill-carousel .carousel-container .carousel-button:hover:not(:disabled) {
+  background-color: var(--second-color-pink);
+  color: var(--foreground);
+  transform: scale(1.1);
+}
+.skill-carousel .carousel-container .carousel-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.skill-carousel .carousel-container .carousel-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+.skill-carousel .carousel-container .tags-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+  min-height: 50px;
+}
+.skill-carousel .carousel-container .tags-wrapper .tag {
+  padding: 0.5rem 1.2rem;
+  background: var(--foreground);
+  color: var(--background);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex: 1 0 calc(25% - 1rem); /* 4 tags par ligne par défaut */
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.skill-carousel .carousel-container .tags-wrapper .tag:hover {
+  transform: translateY(-2px);
+  background-color: var(--second-color-pink);
+  color: var(--foreground);
+}
+.skill-carousel .pagination-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.skill-carousel .pagination-dots .dot {
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--foreground);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.skill-carousel .pagination-dots .dot:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.skill-carousel .pagination-dots .dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: var(--second-color-pink);
+  border: 1px solid var(--foreground);
+}
+.skill-carousel {
+  /* Animations */
+}
+.skill-carousel .tags-wrapper.slide-right .tag {
+  animation: slideFromRight 0.35s ease both;
+}
+.skill-carousel .tags-wrapper.slide-left .tag {
+  animation: slideFromLeft 0.35s ease both;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .skill-carousel .carousel-container {
+    gap: 0.75rem;
+  }
+  .skill-carousel .carousel-container .tags-wrapper {
+    gap: 0.75rem;
+  }
+  .skill-carousel .carousel-container .tags-wrapper .tag {
+    flex: 1 0 calc(33.33% - 0.75rem); /* 3 tags par slide tablette */
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+  .skill-carousel .carousel-container .carousel-button {
+    width: 35px;
+    height: 35px;
+  }
+  .skill-carousel .carousel-container .carousel-button .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .skill-carousel .carousel-container {
+    gap: 0.5rem;
+  }
+  .skill-carousel .carousel-container .tags-wrapper {
+    gap: 0.5rem;
+  }
+  .skill-carousel .carousel-container .tags-wrapper .tag {
+    flex: 1 0 calc(50% - 0.5rem); /* 2 tags par slide mobile */
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
+  }
+  .skill-carousel .carousel-container .carousel-button {
+    width: 30px;
+    height: 30px;
+  }
+  .skill-carousel .carousel-container .carousel-button .icon {
+    width: 18px;
+    height: 18px;
+  }
+}/*# sourceMappingURL=SkillCarousel.css.map */

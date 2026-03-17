@@ -1,5 +1,59 @@
 [
   {
+    "id": "p8",
+    "title": "ADESS - Securité Numérique",
+    "slug": "adess",
+    "year": 2026,
+    "category": "WebDesign & Frontend",
+    "categories": [
+      "Front-End",
+      "SEO",
+      "Responsive Design",
+      "WebDesign"
+    ],
+    "tags": ["Next.js", "Figma", "SEO", "Responsive"],
+    "thumbnail": "/images/projects/asso/adess/1.png",
+    "images": [
+      "/images/projects/asso/adess/1.png",
+      "/images/projects/asso/adess/2.png",
+      "/images/projects/asso/adess/3.png"
+    ],
+    "description": "Association reconnue dans le domaine de la prévention et de la sécurité numérique, ADESS a souhaité faire évoluer son image tout en conservant son ADN d’origine. Dans ce cadre, j’ai accompagné une équipe sur la refonte du site, en intervenant notamment sur le développement front-end ainsi que sur l’optimisation du référencement naturel (SEO).",
+    "github": "Projet Privé",
+    "website": "https://adess-france.fr/",
+    "role": "Web Designer, Developpeur Front-End et Analyste SEO",
+    "skills": [
+      "Figma",
+      "SEO",
+      "Front-End"
+    ]
+  },
+  {
+    "id": "p6",
+    "title": "Menu Maker - Qwenta",
+    "slug": "qwenta-menu-maker",
+    "year": 2024,
+    "category": "Gestion de Projet",
+    "tags": ["Agile", "Kanban", "Documentation"],
+    "thumbnail": "/images/projects/qwenta/cover-project.png",
+    "images": [
+      "/images/projects/qwenta/screen-project/1.png",
+      "/images/projects/qwenta/screen-project/2.png",
+      "/images/projects/qwenta/screen-project/3.png",
+      "/images/projects/qwenta/screen-project/4.png",
+      "/images/projects/qwenta/screen-project/5.png",
+      "/images/projects/qwenta/screen-project/6.png",
+      "/images/projects/qwenta/screen-project/7.png",
+      "/images/projects/qwenta/screen-project/8.png",
+      "/images/projects/qwenta/screen-project/9.png"
+    ],
+    "description": "Conception du cahier des charges et élaboration du planning pour le projet Menu Maker selon une méthode de gestion Agile.",
+    "github": null,
+    "website": null,
+    "role": "Project Manager",
+    "skills": ["Agile", "Kanban", "Wireframes", "Documentation"]
+  },
+  {
     "id": "p7",
     "title": "Portfolio - Lusmo Dev",
     "slug": "portfolio-lusmo",

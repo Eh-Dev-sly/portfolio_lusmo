@@ -1,0 +1,63 @@
+.contact .contact-wrapper {
+  margin-top: 60px;
+  padding-top: 2rem;
+}
+.contact .contact-wrapper .header-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+.contact .contact-wrapper .contact-content {
+  padding: 0 270px;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+@media (max-width: 1200px) {
+  .contact .contact-wrapper .contact-content {
+    padding: 0 150px;
+  }
+}
+@media (max-width: 992px) {
+  .contact .contact-wrapper {
+    margin-top: 40px;
+  }
+  .contact .contact-wrapper .header-title {
+    font-size: 2.5rem;
+  }
+  .contact .contact-wrapper .contact-content {
+    padding: 0 80px;
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact .contact-wrapper {
+    margin-top: 30px;
+    padding-top: 1.5rem;
+  }
+  .contact .contact-wrapper .header-title {
+    font-size: 2rem;
+  }
+  .contact .contact-wrapper .contact-content {
+    padding: 0 40px;
+    margin-top: 2rem;
+    gap: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact .contact-wrapper .header-title {
+    font-size: 1.75rem;
+  }
+  .contact .contact-wrapper .contact-content {
+    padding: 0 20px;
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+}/*# sourceMappingURL=Contact.css.map */

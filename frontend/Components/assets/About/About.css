@@ -1,0 +1,165 @@
+.about {
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+}
+.about .about-pres {
+  width: 75%;
+  padding: 100px 50px;
+}
+.about .about-pres .pres-title {
+  border-bottom: 5px solid var(--foreground);
+  padding: 0 0 1rem 0;
+}
+.about .about-pres .pres-title h1 {
+  font-size: 4rem;
+}
+.about .about-pres .pres-desc {
+  width: 75%;
+}
+.about .about-pres .pres-desc p {
+  letter-spacing: 2px;
+  line-height: 40px;
+  margin: 24px 0;
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+}
+.about .about-pres .pres-desc .skill_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.about .about-pres .pres-desc .skill_contact a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.about .about-pres .pres-desc .skill_contact a span {
+  opacity: 0;
+  padding-right: 0.5rem;
+  display: none;
+  transform: translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.about .about-pres .pres-desc .skill_contact a:hover {
+  background: var(--second-color-pink);
+  color: var(--foreground);
+}
+.about .about-pres .pres-desc .skill_contact a:hover span {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.about .about-pres .pres-desc .skill_contact a:active {
+  box-shadow: 0 3px 10px rgba(99, 102, 241, 0.4);
+}
+.about .about-pics {
+  width: 25%;
+  position: relative;
+}
+.about .about-pics img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0 50px;
+  position: relative;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+  }
+  .about .about-pres {
+    width: 100%;
+    padding: 2rem;
+  }
+  .about .about-pres .pres-desc {
+    width: 100%;
+  }
+  .about .about-pres .pres-desc .skill_contact {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .about .about-pres .pres-desc .skill_contact a {
+    width: 100%;
+    padding: 0.9rem 2rem;
+  }
+  .about .about-pics {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .about .about-pics img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 0 20px;
+    position: relative;
+  }
+}
+@media (max-width: 500px) {
+  .about {
+    flex-direction: column;
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+  .about .about-pres {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  .about .about-pres .pres-title {
+    border-bottom: 3px solid var(--foreground);
+    padding-bottom: 0.5rem;
+  }
+  .about .about-pres .pres-title h1 {
+    font-size: 2.2rem;
+  }
+  .about .about-pres .pres-desc {
+    width: 100%;
+  }
+  .about .about-pres .pres-desc p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+  }
+  .about .about-pres .pres-desc .skill_contact {
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
+  .about .about-pres .pres-desc .skill_contact a {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  .about .about-pics {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .about .about-pics img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 0 20px;
+    position: relative;
+  }
+}/*# sourceMappingURL=About.css.map */
